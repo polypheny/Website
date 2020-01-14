@@ -8,9 +8,6 @@ permalink: /documentation/
 
 Here you should be able to find everything you need to know to use and interact with Polypheny-DB. If you think that something is missing, [please let us know](https://github.com/polypheny/Website/issues). Should you discover a mistake in the docs (or a bug in general) feel free to [open an issue](https://github.com/polypheny/Website/issues) on GitHub.
 
-#**NOTE**: Please note that Polypheny is a research system and is not yet intended to be used in a productive environment.
-#{:.message}
-
 
 ## Getting started
 * [Overview]{:.heading.flip-title} --- Get a basic overview on the different parts of Polypheny.
