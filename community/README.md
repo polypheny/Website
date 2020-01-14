@@ -10,9 +10,13 @@ On this page you find news on what happens around Polypheny.
 
 * [The Team]{:.heading.flip-title} --- The people behind Polypheny.
 * [Talks]{:.heading.flip-title} --- Talks about Polypheny.
-* [Contribute]{:.heading.flip-title} --- Talks about Polypheny.
+* [Publications]{:.heading.flip-title} --- Our scientific publications.
+* [Contribute]{:.heading.flip-title} --- How to contribute to Polypheny.
+* [Code of conduct]{:.heading.flip-title} --- our code of conduct.
 {:.related-posts.faded}
 
 [The Team]: team.md
 [Talks]: talks.md
+[Publications]: publications.md
 [Contribute]: contribute.md
+[Code of conduct]: code_of_conduct.md
