@@ -22,7 +22,7 @@ author1:
   # Social media icons in sidebar.
   # Comment/uncommet to show/hide. Rearrange to change the order in which they appear.
   social:
-    twitter:         jekyllrb
+    # twitter:         jekyllrb
     github:          polypheny/Polypheny-DB
     download:        https://github.com/polypheny/Polypheny-Control/archive/master.zip
     # email:           <mail@domain.tld>
