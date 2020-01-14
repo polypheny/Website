@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: page
 title: About
 description: >
   About the Polypheny project.
