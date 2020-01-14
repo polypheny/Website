@@ -49,10 +49,12 @@ author:
 menu:
   - title:             About
     url:               /about/
+  - title:             Background
+    url:               /background/
+  - title:             Community
+    url:               /community/   
   - title:             Documentation
     url:               /documentation/
-  - title:             Example
-    url:               /example/
 
 
 
