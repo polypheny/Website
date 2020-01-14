@@ -25,11 +25,11 @@ Here you should be able to find everything you need to know to use and interact 
 {:.related-posts.faded}
 
 ## For developers
-* [GitHub Labels]{:.heading.flip-title} --- Best practices for handling issues and pull requests
+* [GitHub Labels]{:.heading.flip-title} --- Best practices for handling issues and pull requests.
 * [Logging]{:.heading.flip-title} --- Dealing with the logger.
 * [Documentation Guidelines]{:.heading.flip-title} --- What and how to document.
 * [Dependencies]{:.heading.flip-title} --- How we deal with dependencies.
-* [UI Development Environment]{:.heading.flip-title} --- Setup a Polypheny-UI development environment
+* [UI Development Environment]{:.heading.flip-title} --- Setup a Polypheny-UI development environment.
 {:.related-posts.faded}
 
 ## Other
@@ -45,7 +45,7 @@ Here you should be able to find everything you need to know to use and interact 
 [Stores]: stores.md
 [GitHub Labels]: Labels.md
 [Logging]: Logging.md
-[Documentation]: Documentation.md
+[Documentation Guidelines]: Documentation.md
 [Dependencies]: Dependencies.md
 [UI Development Environment]: UI-Dev-Env.md
 [License]: license.md
