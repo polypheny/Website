@@ -8,8 +8,8 @@ permalink: /documentation/
 
 Here you should be able to find everything you need to know to use and interact with Polypheny-DB. If you think that something is missing, [please let us know](https://github.com/polypheny/Website/issues). Should you discover a mistake in the docs (or a bug in general) feel free to [open an issue](https://github.com/polypheny/Website/issues) on GitHub.
 
-**NOTE**: Please note that Polypheny is a research system and is not yet intended to be used in a productive environment.
-{:.message}
+#**NOTE**: Please note that Polypheny is a research system and is not yet intended to be used in a productive environment.
+#{:.message}
 
 
 ## Getting started
@@ -25,9 +25,9 @@ Here you should be able to find everything you need to know to use and interact 
 {:.related-posts.faded}
 
 ## For developers
-* [Issue Management]{:.heading.flip-title} --- Best practices for handling issues and pull requests
+* [GitHub Labels]{:.heading.flip-title} --- Best practices for handling issues and pull requests
 * [Logging]{:.heading.flip-title} --- Dealing with the logger.
-* [Documentation]{:.heading.flip-title} --- What and how to document.
+* [Documentation Guidelines]{:.heading.flip-title} --- What and how to document.
 * [Dependencies]{:.heading.flip-title} --- How we deal with dependencies.
 * [UI Development Environment]{:.heading.flip-title} --- Setup a Polypheny-UI development environment
 {:.related-posts.faded}
@@ -43,7 +43,7 @@ Here you should be able to find everything you need to know to use and interact 
 [Types]: types.md
 [PolySQL]: polysql.md
 [Stores]: stores.md
-[Issue Management]: issue_management.md
+[GitHub Labels]: Labels.md
 [Logging]: Logging.md
 [Documentation]: Documentation.md
 [Dependencies]: Dependencies.md

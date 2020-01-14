@@ -1,5 +1,5 @@
 ---
-title: Polypheny-UI Development Environment
+title: UI Development Environment
 description: >
   How to setup-up a Polypheny-UI development environment.
 hide_description: true
