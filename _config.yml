@@ -55,7 +55,8 @@ menu:
     url:               /community/   
   - title:             Documentation
     url:               /documentation/
-
+  - title:             Contact
+    url:               /contact/
 
 
 # Add links to the footer.
