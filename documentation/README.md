@@ -26,7 +26,10 @@ Here you should be able to find everything you need to know to use and interact 
 
 ## For developers
 * [Issue Management]{:.heading.flip-title} --- Best practices for handling issues and pull requests
-* [Logging]{:.heading.flip-title} --- How to deal with logging
+* [Logging]{:.heading.flip-title} --- Dealing with the logger.
+* [Documentation]{:.heading.flip-title} --- What and how to document.
+* [Dependencies]{:.heading.flip-title} --- How we deal with dependencies.
+* [UI Development Environment]{:.heading.flip-title} --- Setup a Polypheny-UI development environment
 {:.related-posts.faded}
 
 ## Other
@@ -41,6 +44,9 @@ Here you should be able to find everything you need to know to use and interact 
 [PolySQL]: polysql.md
 [Stores]: stores.md
 [Issue Management]: issue_management.md
-[Logging]: logging.md
+[Logging]: Logging.md
+[Documentation]: Documentation.md
+[Dependencies]: Dependencies.md
+[UI Development Environment]: UI-Dev-Env.md
 [License]: license.md
 [Logo]: logo.md
