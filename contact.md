@@ -9,9 +9,9 @@ hide_description: true
 Polypheny is a project of the [Databases and Information Systems (DBIS) Group](https://dbis.dmi.unibas.ch/") at the [University of Basel](https://unibas.ch/).
 
 ## Address
-University of Basel
-Department of Mathematics and Computer Science
+University of Basel\
+Department of Mathematics and Computer Science\
 Spiegelgasse 1, CH-4051 Basel, Switzerland
 
 ## Email
-dbis-cs@unibas.ch
+[dbis-cs@unibas.ch](mailto:dbis-cs@unibas.ch)
