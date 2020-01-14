@@ -24,11 +24,11 @@ title:                 Polypheny
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  "A self-adaptive Polystore that provides cost- and workload aware access to heterogeneous data."
+  A self-adaptive Polystore that provides cost- and workload aware access to heterogeneous data.
 
 # A shorter description for the sidebar.
 tagline:               >
-  "A distributed and self-adaptive Polystore"
+  A distributed and self-adaptive Polystore
 
 # A list of keywords for your blog
 keywords:              [polystore, distribution, databases, multi-stores, nosql, sql]
