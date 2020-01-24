@@ -11,7 +11,7 @@ Here you should be able to find everything you need to know to use and interact 
 
 ## Getting started
 * [Overview]{:.heading.flip-title} --- Get a basic overview on the different parts of Polypheny.
-* [Setup]{:.heading.flip-title} --- How to stup and run Polypheny.
+* [Setup]{:.heading.flip-title} --- How to setup and run Polypheny.
 {:.related-posts.faded}
 
 ## Using Polypheny-DB
