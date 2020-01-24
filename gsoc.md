@@ -1,14 +1,11 @@
 ---
 layout: page
 title: Google Summer of Code
-description: >
-  Google Summer of Code project page of Polypheny.
-hide_description: true
 ---
 
-Welcome to the Polypheny Google Summer of Code (GSoC) 2020 projects page.
+Welcome to the Polypheny [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/) 2020 projects page.
 
-Please note that our application for GSoC is currently under evaluation at Google and we have not yet been accepted as mentoring organization. 
+Please note that our application for GSoC 2020 is currently under evaluation at Google and we have not yet been accepted as mentoring organization. 
 {:.message}
 
 
@@ -18,7 +15,7 @@ Please note that our application for GSoC is currently under evaluation at Googl
 
 ## What is GSoC?
 
-Google Summer of Code is designed to encourage student participation in open source development. Over the past 15 years, Google Summer of Code has brought together over 15,000 students and 686 open source projects to create over 36 millions of lines of code. Google will accept applications from student applications from March 46 to March 31, 2020.
+[Google Summer of Code](https://summerofcode.withgoogle.com/) is designed to encourage student participation in open source development. Over the past 15 years, Google Summer of Code has brought together over 15,000 students and 686 open source projects to create over 36 millions of lines of code. Google will accept applications from student applications from March 46 to March 31, 2020.
 
 
 ## Polypheny at GSoC
@@ -29,7 +26,7 @@ This is the first time we apply to be part of the Google Summer of Code.
 
 
 
-## Technology stack
+## Technology Stack
 
 
 
@@ -47,17 +44,50 @@ TBA
 
 Below, you can find some ideas on the directions in which we could push Polypheny together. Please consider them as starting points for your proposal. Of course, if you have other ideas, we would be very happy to hear them. Feel free to contact us and get feedback on what you plan to do beforehand.
 
-| Task                                    | Description                                            | Technologies    | Difficulty    |
-|-----------------------------------------|--------------------------------------------------------|-----------------|---------------|
-| Query the blockchain                    |                                                        | Java            | medium-hard   |
-| Support for Contextual Query Language   |                                                        | Java            | medium-hard   |
-| RESTful query interface                 |                                                        | Java            | medium        |
-| Quality check and assurance             | Unit-Testing / structural system testing               | Java            | easy          |
-| Visualize it                            | Visualization of planning and optimization decisions   | Java            | medium-easy   |
-| Workload classification and forecasting |                                                        | Java            | medium        |
-| Keep them All                           | Multi-Version Support in Polypheny-DB                  | Java            | hard          |
-| Physical query plan builder             |                                                        | Java            | medium        |
-| Polypheny Client ??                     | ??                                                     | ??              | ??            |
+### Query the blockchain
+Difficulty: medium-hard
+
+
+### Quality check and assurance
+Unit-Testing / structural system testing  
+
+Difficulty: easy
+
+
+###  Visualize it  
+Visualization of planning and optimization decisions
+
+Difficulty: medium-easy
+
+
+### Support for Contextual Query Language
+
+Difficulty: medium-hard
+
+
+### RESTful query interface 
+
+Difficulty: medium
+
+
+### Workload classification and forecasting
+
+Difficulty: medium
+
+
+### Keep them All     
+
+Difficulty: hard
+
+
+
+### Physical query plan builder
+
+Difficulty: medium
+
+
+### Polypheny Client ?? 
+
 
 
 
@@ -73,6 +103,7 @@ This is the mentoring team for the GSoC 2020.
 | Heiko Schuldt     | Mentor, OrgAdmin | English, German |
 | Alexander Stiemer | Mentor, OrgAdmin | English, German |
 | Marco Vogt        | Mentor, OrgAdmin | English, German |
+{:.stretch-table}
 
 
 
