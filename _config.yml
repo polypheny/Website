@@ -66,7 +66,7 @@ menu:
 #     url:               /cookies-policy/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+copyright:             This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/)
 
 # Format of the permalinks
 permalink:             /:categories/:year-:month-:day-:title/
@@ -81,7 +81,8 @@ paginate_path:         /page-:num/
 
 # Sidebar image and theme color of the site.
 #accent_image:          /assets/img/sidebar-bg.jpg
-accent_image:          none
+#accent_image:          none
+accent_image:          background: ' linear-gradient(rgb(25, 55, 71) 0%, rgb(35, 62, 76) 30%, rgb(60, 146, 158) 50%, rgb(213, 213, 212) 70%, rgb(205, 204, 200) 100%)'
 accent_color:          rgb(79,177,186)
 
 # This is used for the `theme-color` meta tag,
@@ -150,7 +151,7 @@ hydejack:
   no_google_fonts:     false
 
   # Set to `true` if you don't want to show an icon indicating external links
-  no_mark_external:    false
+  no_mark_external:    true
 
   # Set to `true` if third party plugins fail to work with dynamically loaded pages
   no_push_state:       false
@@ -171,7 +172,7 @@ hydejack:
 
   # Code blocks and tables "break" the layout by spanning the full available width.
   # Set this to true if you want them to be the same width as other content.
-  no_break_layout:     false
+  no_break_layout:     true
 
   # Set to `true` if you do not want to expose your resume and projects
   # in machine-readable formats.
