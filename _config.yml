@@ -82,7 +82,8 @@ paginate_path:         /page-:num/
 # Sidebar image and theme color of the site.
 #accent_image:          /assets/img/sidebar-bg.jpg
 #accent_image:          none
-accent_image:          background: ' linear-gradient(rgb(25, 55, 71) 0%, rgb(35, 62, 76) 30%, rgb(60, 146, 158) 50%, rgb(213, 213, 212) 70%, rgb(205, 204, 200) 100%)'
+accent_image:          
+    background: 'linear-gradient(rgb(25, 55, 71) 0%, rgb(35, 62, 76) 30%, rgb(60, 146, 158) 50%, rgb(213, 213, 212) 70%, rgb(205, 204, 200) 100%)'
 accent_color:          rgb(79,177,186)
 
 # This is used for the `theme-color` meta tag,
