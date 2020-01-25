@@ -12,6 +12,8 @@ Below, you can find some ideas on the directions in which we could push Polyphen
 ## Query the blockchain
 A blockchain can be seen as a distributed append-only database. The aim of this project is to build an adapter for executing (read) queries against (different) blockchains like the Bitcoin blockchain or the Ethereum blockchain.
 
+Due to Polypheny's ability to join an combine data from different adapters in one query this allows to integrate the latest data from a blockchain into arbitrary queries. 
+
 **Difficulty**: medium-hard
 
 
@@ -28,27 +30,30 @@ Currently, Polypheny has only a few integration tests which make it hard to avoi
 
 
 
-##  Visualize it  
-Visualization of planning and optimization decisions
+##  Visualize it
+In debugging mode, Polypheny creates a lot of log output on all decisions and optimizations taken while processing a query. This output is hard to read but contains a lot of useful and interesting information for developing and optimizing Polypheny. 
+
+The idea of this project is to visualize this debugging information in the UI. This allows to easily review the whole query processing and find errors. 
 
 **Difficulty**: medium-easy
 
 
 
 ## Support for Contextual Query Language
-
-**Difficulty**: medium-hard
-
-
-
-## RESTful query interface 
+The _Contextual Query Language (CQL)_ is a formal language for representing queries to information retrieval systems such as search engines, bibliographic catalogs and museum collection information. The idea of this project is to add a read-only CQL query interface to Polypheny-DB. 
 
 **Difficulty**: medium
 
 
 
-## Predicting the future
-Workload classification and forecasting
+## RESTful query interface 
+RESTful APIs are programming interfaces that accept HTTP _GET_, _PUT_, _POST_ and _DELETE_ requests. REST interactions are always stateless.
+
+The aim of this project is to add a RESTful query interface for Polypheny. The idea is not to wrap a SQL query into a get request but to express the query in a "REST-style". A query could look like that: 
+```
+GET /schema/table/filter1/filter2/
+```
+A proposal for this project should contain a concept on how read and write queries would look like.
 
 **Difficulty**: medium
 
