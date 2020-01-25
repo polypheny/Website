@@ -33,7 +33,7 @@ This is the first time we apply to be part of the Google Summer of Code.
 
 ## Student Application
 
-Please note that we have a [code of conduct](https://polypheny.org/community/code_of_conduct/). Please follow it in all your interactions with the project and our community.
+Please note that we have a [code of conduct](/community/code_of_conduct.md). Please follow it in all your interactions with the project and our community.
 {:.message}
 
 TBA
@@ -42,52 +42,7 @@ TBA
 
 ## Project Ideas
 
-Below, you can find some ideas on the directions in which we could push Polypheny together. Please consider them as starting points for your proposal. Of course, if you have other ideas, we would be very happy to hear them. Feel free to contact us and get feedback on what you plan to do beforehand.
-
-### Query the blockchain
-Difficulty: medium-hard
-
-
-### Quality check and assurance
-Unit-Testing / structural system testing  
-
-Difficulty: easy
-
-
-###  Visualize it  
-Visualization of planning and optimization decisions
-
-Difficulty: medium-easy
-
-
-### Support for Contextual Query Language
-
-Difficulty: medium-hard
-
-
-### RESTful query interface 
-
-Difficulty: medium
-
-
-### Workload classification and forecasting
-
-Difficulty: medium
-
-
-### Keep them All     
-
-Difficulty: hard
-
-
-
-### Physical query plan builder
-
-Difficulty: medium
-
-
-### Polypheny Client ?? 
-
+See [GSoC Project Ideas](/gsoc/ideas.md) for a list of project ideas.
 
 
 
