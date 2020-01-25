@@ -33,7 +33,7 @@ This is the first time we apply to be part of the Google Summer of Code.
 
 ## Student Application
 
-Please note that we have a [code of conduct](/community/code_of_conduct.md). Please follow it in all your interactions with the project and our community.
+Please note that we have a [code of conduct](/community/code_of_conduct/). Please follow it in all your interactions with the project and our community.
 {:.message}
 
 TBA
@@ -42,7 +42,7 @@ TBA
 
 ## Project Ideas
 
-See [GSoC Project Ideas](/gsoc/ideas.md) for a list of project ideas.
+See [GSoC Project Ideas](/gsoc/ideas/) for a list of project ideas.
 
 
 
