@@ -42,7 +42,7 @@ TBA
 
 ## Project Ideas
 
-See [GSoC Project Ideas](/gsoc/ideas/) for a list of project ideas.
+See [GSoC Project Ideas](/community/gsoc/ideas/) for a list of project ideas.
 
 
 
@@ -66,6 +66,5 @@ This is the mentoring team for the GSoC 2020.
 
 Please feel free to contact us if you have any questions. To make it easier for us to organize our emails, please add "GSoC 2020" in your subject line. 
 
-ADD MAIL Address
-
+{% include button.html button_name="marco.vogt@unibas.ch" onclick="location.href='mailto:marco.vogt@unibas?subject=[GSoC 2020]';" button_class="primary" %}
 

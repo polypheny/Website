@@ -3,13 +3,10 @@ layout: page
 title: GSoC Project Ideas
 ---
 
-Below, you can find some ideas on the directions in which we could push Polypheny together. Please consider them as starting points for your proposal. Of course, if you have other ideas, we would be very happy to hear them. Feel free to contact us and get feedback on what you plan to do beforehand.
+Below, you can find some ideas on the directions in which we could push Polypheny together. Please consider them as starting points for your proposal. Of course, if you have other ideas, we would be very happy to hear them. Feel free to [contact us](/community/gsoc/#contact) and get feedback on what you plan to do beforehand.
 
 * this unordered seed list will be replaced by toc as unordered list
 {:toc}
-
-Note: The project ideas are displayed in no particular order.
-{:.message}
 
 
 ## Query the blockchain
