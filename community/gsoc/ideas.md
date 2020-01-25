@@ -15,6 +15,7 @@ A blockchain can be seen as a distributed append-only database. The aim of this 
 **Difficulty**: medium-hard
 
 
+
 ## Quality check and assurance
 A major problem in the process of developing any kind of software is to ensure that a change does not introduce any bugs in a completely different subsystem of the software.
 For a database system this also includes to ensure the completeness and correctness of the results of a query.
@@ -26,10 +27,12 @@ Currently, Polypheny has only a few integration tests which make it hard to avoi
 **Difficulty**: easy
 
 
+
 ##  Visualize it  
 Visualization of planning and optimization decisions
 
 **Difficulty**: medium-easy
+
 
 
 ## Support for Contextual Query Language
@@ -37,14 +40,18 @@ Visualization of planning and optimization decisions
 **Difficulty**: medium-hard
 
 
+
 ## RESTful query interface 
 
 **Difficulty**: medium
 
 
-## Workload classification and forecasting
+
+## Predicting the future
+Workload classification and forecasting
 
 **Difficulty**: medium
+
 
 
 ## Keep them all     
@@ -53,21 +60,21 @@ A multi-version database system allows to store multiple versions of the same en
 The goal of this project is to extend Polypheny-DB to transparently support storing multiple versions of an element including a full referential integrity for the past revisions. 
 
 The project includes
-\begin{itemize}
-	\item extending Polypheny's SQL dialect to support specifying a version,
-	\item rewriting the queries to retrieve the right version and to add a new version if the query aims to modify an existing entry, and
-	\item evaluate the correctness of the system especially for complex queries.
-\end{itemize}
+* extending Polypheny's SQL dialect to support specifying a version,
+* rewriting the queries to retrieve the right version and to add a new version if the query aims to modify an existing entry, and
+* evaluate the correctness of the system especially for complex queries.
 
 **Difficulty**: hard
 
 
 
 ## Physical query plan builder
+The Polypheny-UI already comes with a logical query plan builder integrated. The aim of this project is to implement a graphical build tool for physical query plans similar to the one for logical query plans. In the polystore context, the physical query plan distinguishes from the logical one by using operators specific to the involved data store adapters. 
+
+A physical query plan builder would be extremely helpful for development. Because there is already an implementation for logical plans, parts of the code can be reused. 
+
+To get an impression how a physical query plan in Polypheny looks like you can simply execute a query in the UI and have a look at the plan by selecting "Physical Query Plan" in the left menu.
 
 **Difficulty**: medium
-
-
-## Polypheny Client ?? 
 
 
