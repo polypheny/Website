@@ -22,16 +22,13 @@ Please note that our application for GSoC 2020 is currently under evaluation at 
 
 _Polypheny-DB_ is a self-adaptive polystore that provides cost- and workload aware access to heterogeneous data. As a polystore, Polypheny-DB seamlessly combines different underlying data storage engines to provide good query performance independent of the type of workload.
 
-This is the first time we apply to be part of the Google Summer of Code.  
-
-
-
-## Technology Stack
-
+This is the first time we apply to be part of the Google Summer of Code. As part of GSoC we want to introduce new talents to the world of open source software development and to our community. 
 
 
 
 ## Student Application
+
+If you are interested in our project and want to help with improving and extending Polypheny as part of GSoC we kindly ask you to carefully read and follow the outlined instructions.
 
 Please note that we have a [code of conduct](/community/code_of_conduct/). Please follow it in all your interactions with the project and our community.
 {:.message}

@@ -5,6 +5,9 @@ title: GSoC Project Ideas
 
 Below, you can find some ideas on the directions in which we could push Polypheny together. Please consider them as starting points for your proposal. Of course, if you have other ideas, we would be very happy to hear them. Feel free to [contact us](/community/gsoc/#contact) and get feedback on what you plan to do beforehand.
 
+Simply copying and pasting one of the ideas will not work. On the other hand, creating a completely new idea without first [consulting](/community/gsoc/#contact) the mentors won’t work as well.
+{:.message}
+
 * this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
