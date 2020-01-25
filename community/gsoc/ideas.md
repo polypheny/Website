@@ -14,9 +14,9 @@ Difficulty: medium-hard
 
 
 ## Quality check and assurance
+{% include button.html button_name="easy" onclick=";" button_class="success" %}
 Unit-Testing / structural system testing  
 
-Difficulty: easy
 
 
 ##  Visualize it  

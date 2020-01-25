@@ -20,7 +20,7 @@ Please note that our application for GSoC 2020 is currently under evaluation at 
 
 ## Polypheny at GSoC
 
-_Polypheny-DB_ is a self-adaptive Polystore that provides cost- and workload aware access to heterogeneous data. As a polystore, Polypheny-DB seamlessly combines different underlying data storage engines to provide good query performance independent of the type of workload.
+_Polypheny-DB_ is a self-adaptive polystore that provides cost- and workload aware access to heterogeneous data. As a polystore, Polypheny-DB seamlessly combines different underlying data storage engines to provide good query performance independent of the type of workload.
 
 This is the first time we apply to be part of the Google Summer of Code.  
 
@@ -66,5 +66,5 @@ This is the mentoring team for the GSoC 2020.
 
 Please feel free to contact us if you have any questions. To make it easier for us to organize our emails, please add "GSoC 2020" in your subject line. 
 
-{% include button.html button_name="marco.vogt@unibas.ch" onclick="location.href='mailto:marco.vogt@unibas?subject=[GSoC 2020]';" button_class="primary" %}
+{% include button.html button_name="marco.vogt@unibas.ch" onclick="location.href='mailto:marco.vogt@unibas.ch?subject=[GSoC 2020]';" button_class="primary" %}
 
