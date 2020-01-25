@@ -49,10 +49,8 @@ The _Contextual Query Language (CQL)_ is a formal language for representing quer
 ## RESTful query interface 
 RESTful APIs are programming interfaces that accept HTTP _GET_, _PUT_, _POST_ and _DELETE_ requests. REST interactions are always stateless.
 
-The aim of this project is to add a RESTful query interface for Polypheny. The idea is not to wrap a SQL query into a get request but to express the query in a "REST-style". A query could look like that: 
-```
-GET /schema/table/filter1/filter2/
-```
+The aim of this project is to add a RESTful query interface for Polypheny. The idea is not to wrap a SQL query into a get request but to express the query in a "REST-style". A query could look like that: `GET /schema/table/filter1/filter2/`
+
 A proposal for this project should contain a concept on how read and write queries would look like.
 
 **Difficulty**: medium
