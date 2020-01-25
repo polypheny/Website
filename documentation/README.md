@@ -34,8 +34,8 @@ Here you should be able to find everything you need to know to use and interact 
 [Setup]: setup.md
 [Basics]: basics.md
 [Types]: types.md
-[PolySQL]: polysql.md
-[Stores]: stores.md
+[PolySQL]: PolySQL.md
+[Stores]: Stores.md
 [GitHub Labels]: Labels.md
 [Logging]: Logging.md
 [Documentation Guidelines]: Documentation.md
