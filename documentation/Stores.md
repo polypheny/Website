@@ -11,5 +11,6 @@ Polypheny currently supports the following data stores:
 * Elasticsearch (WIP)
 * Geode (WIP)
 * HSQLDB
+* MonetDB
 * MongoDB (WIP)
 * PostgreSQL

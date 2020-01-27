@@ -16,7 +16,6 @@ On this page you find news on what happens around Polypheny.
 {:.related-posts.faded}
 
 [The Team]: team.md
-[Talks]: talks.md
 [Publications]: publications.md
 [Contribute]: contribute.md
 [Code of Conduct]: code_of_conduct.md
