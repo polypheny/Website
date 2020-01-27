@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Team
+title: The Team
 ---
 
 These are the people contributing to Polypheny:

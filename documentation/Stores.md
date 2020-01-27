@@ -5,7 +5,7 @@ title: Stores
 
 Polypheny currently supports the following data stores:
 
-* Cassandra (WIP)
+* Cassandra
 * CSV files
 * Druid (WIP)
 * Elasticsearch (WIP)
