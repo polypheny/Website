@@ -8,7 +8,7 @@ On this page you find news on what happens around Polypheny.
 
 * [The Team]{:.heading.flip-title} --- The people behind Polypheny.
 * [Publications]{:.heading.flip-title} --- Our scientific publications.
-* [Contribute]{:.heading.flip-title} --- How to contribute to Polypheny.
+* [Get involved]{:.heading.flip-title} --- How to contribute to Polypheny.
 * [Code of Conduct]{:.heading.flip-title} --- Our code of conduct.
 * [Logo]{:.heading.flip-title} --- Our logo in various formats.
 * [License]{:.heading.flip-title} --- The license of this project.
@@ -16,7 +16,7 @@ On this page you find news on what happens around Polypheny.
 
 [The Team]: team.md
 [Publications]: publications.md
-[Contribute]: contribute.md
+[Get involved]: contribute.md
 [Code of Conduct]: code_of_conduct.md
 [License]: license.md
 [Logo]: logo.md
