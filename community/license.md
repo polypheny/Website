@@ -1,7 +1,9 @@
 ---
 layout: page
-title: MIT License
+title: License
 ---
+
+## MIT License
 
 Copyright (c) 2017-2020 Databases and Information Systems Research Group, University of Basel, Switzerland
 

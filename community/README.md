@@ -18,4 +18,5 @@ On this page you find news on what happens around Polypheny.
 [Publications]: publications.md
 [Get involved]: contribute.md
 [Code of Conduct]: code_of_conduct.md
+[Logo]: logo.md
 [License]: license.md
