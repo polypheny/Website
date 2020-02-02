@@ -48,7 +48,7 @@ author:
 # Add links to the sidebar.
 menu:
   - title:             About
-    url:               /about/
+    url:               /
   - title:             Community
     url:               /community/   
   - title:             Documentation

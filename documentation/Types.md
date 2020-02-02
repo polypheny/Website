@@ -5,7 +5,7 @@ title: Types
 
 This page gives an overview about the data types supported by Polypheny.
 	
-### BigInt
+### Bigint
 8 bytes signed (two's complement). Ranges from `-9,223,372,036,854,775,808` to `+9,223,372,036,854,775,807`.
 	
 ### Boolean
@@ -23,7 +23,7 @@ A decimal number is a number that can have a decimal point in it. The size argum
 ### Integer
 4 bytes, signed (two's complement). Covers a range from `-2,147,483,648` to `2,147,483,647`. 
 	
-### REAL
+### Real
 4 bytes, IEEE 754. Covers a range from `1.40129846432481707e-45` to `3.40282346638528860e+38` (positive or negative). 
 	
 ### Text
@@ -35,8 +35,8 @@ Represents a time of day without time zone. Format: `hh:mm:ss`
 ### Timestamp
 Represents a combination of DATE and TIME values separated by a space. Format: `yyyy-mm-dd hh:mm:ss`
 
-### VarBinary
+### Varbinary
 Variable width binary string, the maximum length is specified in parenthesis.
 
-### VarChar
+### Varchar
 String (can contain letters, numbers, and special characters) with variable length. The maximum length is specified in parenthesis.
