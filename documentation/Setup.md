@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Overview
+title: Setup
 ---
 
 The easiest way to setup Polypheny-DB is to use [Polypheny Control](https://github.com/polypheny/Polypheny-Control). 
@@ -19,10 +19,10 @@ To start the Web-UI execute `polypheny-control.jar` by specifying the parameter 
 java -jar polypheny-control.jar control
 ```
 
-The interface can now be accessed on port 8070. This port can be changed using the parameter `-p`:
+The interface can now be accessed on port `8070`. This port can be changed by specifying another port using the parameter `-p`:
 
 ```java
 java -jar polypheny-control.jar control -p 8070
 ```
 
-We strongly recommend not to use port 8080, 8081 and 8082 because these are the default ports of services offered by Polypheny-DB.
+We strongly recommend not to use port `8080`, `8081` and `8082` because these are the default ports of services offered by Polypheny-DB.
