@@ -8,7 +8,7 @@ On this page you can find our logo in two orientations.
 
 ## Default
 
-![Polypheny Logo](https://polypheny.org/community/logo/logo.png){:.lead data-width="400" data-height="400"}
+![Polypheny Logo](https://polypheny.org/community/logo/logo.png){:.lead data-width="200" data-height="200"}
 
 
 ## Landscape
