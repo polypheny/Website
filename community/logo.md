@@ -3,14 +3,14 @@ layout: page
 title: Logo
 ---
 
-On this page you can find our logo:
+On this page you can find our logo in two orientations.
 
 
-# Default
+## Default
 
-![Polypheny Logo](https://polypheny.org/community/logo/logo.png){:.lead data-width="800" data-height="800"}
+![Polypheny Logo](https://polypheny.org/community/logo/logo.png){:.lead data-width="400" data-height="400"}
 
 
-# Landscape
+## Landscape
 
-![Polypheny Logo Landscape](https://polypheny.org/community/logo/logo-landscape.png){:.lead data-width="800" data-height="256"}
+![Polypheny Logo Landscape](https://polypheny.org/community/logo/logo-landscape.png){:.lead data-width="400" data-height="128"}
