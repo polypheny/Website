@@ -3,10 +3,11 @@ layout: page
 title: Overview
 ---
 
-The Polypheny stack consists out of several parts. This page gives an overview about the different parts:
+The Polypheny stack consists out of several parts. This page gives an overview about the different parts of the stack.
+
 
 ## Polypheny-DB
-This is the main component of the Polypheny stack. Polypheny-DB is a self-adaptive polystore that provides cost- and workload aware access to heterogeneous data. As a Polystore, Polypheny-DB seamlessly combines different underlying data storage engines to provide good query performance independent of the type of workload.
+This is the main component of the Polypheny stack. Polypheny-DB is a self-adaptive polystore that provides cost- and workload aware access to heterogeneous data. As a polystore, Polypheny-DB seamlessly combines different underlying data storage engines to provide good query performance independent of the type of workload.
 
 
 ## Polypheny-UI
