@@ -15,7 +15,6 @@ Here you should be able to find everything you need to know to use and interact 
 {:.related-posts.faded}
 
 ## Using Polypheny-DB
-* [Basics]{:.heading.flip-title} --- A short overview on Polypheny-DB.
 * [Types]{:.heading.flip-title} --- Overview on the type system.
 * [PolySQL]{:.heading.flip-title} --- The syntax of our SQL dialect.
 * [Stores]{:.heading.flip-title} --- Overview on the supported stores.
@@ -30,10 +29,9 @@ Here you should be able to find everything you need to know to use and interact 
 {:.related-posts.faded}
 
 
-[Overview]: overview.md
-[Setup]: setup.md
-[Basics]: basics.md
-[Types]: types.md
+[Overview]: Overview.md
+[Setup]: Setup.md
+[Types]: Types.md
 [PolySQL]: PolySQL.md
 [Stores]: Stores.md
 [GitHub Labels]: Labels.md
