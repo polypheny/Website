@@ -15,14 +15,14 @@ Please note that our application for GSoC 2020 is currently under evaluation at 
 
 ## What is GSoC?
 
-[Google Summer of Code](https://summerofcode.withgoogle.com/) is designed to encourage student participation in open source development. Over the past 15 years, Google Summer of Code has brought together over 15,000 students and 686 open source projects to create over 36 millions of lines of code. Google will accept applications from student applications from March 46 to March 31, 2020.
+[Google Summer of Code](https://summerofcode.withgoogle.com/) is designed to encourage student participation in open source development. Over the past 15 years, Google Summer of Code has brought together over 15,000 students and 686 open source projects to create over 36 millions of lines of code. Google will accept student applications from March 16 to March 31, 2020.
 
 
 ## Polypheny at GSoC
 
 _Polypheny-DB_ is a self-adaptive polystore that provides cost- and workload aware access to heterogeneous data. As a polystore, Polypheny-DB seamlessly combines different underlying data storage engines to provide good query performance independent of the type of workload.
 
-This is the first time we apply to be part of the Google Summer of Code. As part of GSoC we want to introduce new talents to the world of open source software development and to our community. 
+This is the first time we apply to be part of the Google Summer of Code. As part of GSoC, we want to introduce new talents to the world of open source software development and to our community. 
 
 
 

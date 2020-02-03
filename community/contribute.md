@@ -12,7 +12,7 @@ Please note that we have a [code of conduct](/community/code_of_conduct/). Pleas
 ## How to start
 we have a list of [good first issues](https://github.com/polypheny/Polypheny-DB/issues?q=is%3Aissue+is%3Aopen+label%3AE-good-first-issue) that contain bugs that have a relatively limited scope. This is a great place to get started.
 
-If you decide to fix an issue, please be sure to check the comment thread in case somebody is already working on a fix. If nobody is working on it at the moment, please leave a comment stating that you intend to work on it and take the issue by assigning it to yourself.
+If you decide to fix an issue, please be sure to check the comment thread in case somebody is already working on a fix. If nobody is working on it at the moment, please leave a comment stating that you intend to work on it.
 
 
 ## Code Style

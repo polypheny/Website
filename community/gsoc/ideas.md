@@ -15,15 +15,14 @@ Simply copying and pasting one of the ideas will not work. On the other hand, cr
 ## Query the blockchain
 A blockchain can be seen as a distributed append-only database. The aim of this project is to build an adapter for executing (read) queries against (different) blockchains like the Bitcoin blockchain or the Ethereum blockchain.
 
-Due to Polypheny's ability to join an combine data from different adapters in one query this allows to integrate the latest data from a blockchain into arbitrary queries. 
+Due to Polypheny's ability to join and combine data from different adapters in one query, this project will allow to integrate the latest data from a blockchain into arbitrary queries. 
 
 **Difficulty**: medium-hard
 
 
 
 ## Quality check and assurance
-A major problem in the process of developing any kind of software is to ensure that a change does not introduce any bugs in a completely different subsystem of the software.
-For a database system this also includes to ensure the completeness and correctness of the results of a query.
+A major problem in the process of developing any kind of software is to ensure that a change does not introduce any bugs in a completely different subsystem of the software. For a database system this also includes to ensure the completeness and correctness of the results of a query.
 
 Continuously and automatically checking that a system behaves and works like expected is therefore important to ensure consistent software quality and to avoid regressions. Usually, this is done using unit tests and integration tests. While unit tests check that individual parts (units) of the code (typically individual methods) work as expected, integration testing checks if the whole application works correctly.
 
@@ -61,7 +60,7 @@ A proposal for this project should contain a concept on how read and write queri
 
 
 ## Keep them all     
-A multi-version database system allows to store multiple versions of the same entry. This allows, for example, in a HR database to not only query the current salary of an employee, but also the salary he had two years ago.  
+A multi-version database system allows to store multiple versions of the same entry. This allows, for example, in a human resources database to not only query the current salary of an employee, but also the salary he had two years ago.  
 
 The goal of this project is to extend Polypheny-DB to transparently support storing multiple versions of an element including a full referential integrity for the past revisions. 
 
