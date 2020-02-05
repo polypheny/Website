@@ -41,9 +41,10 @@ For the actual proposal, you can get inspiration from the ideas listed on the [i
 
 Your proposal should include 
 
--   a description of and motivation for your project idea,
--   a rough time plan and 
--   details on how to implement your idea.
+- a description of and motivation for your project idea,
+- a rough time plan and 
+- details on how to implement your idea and
+- the GitHub id of your pull request.
 
 Please check our [Polypheny@GSoC]( https://polypheny.org/community/gsoc/) page for additional information and do not hesitate to contact us in case you have questions.
 

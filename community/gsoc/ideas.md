@@ -3,9 +3,9 @@ layout: page
 title: GSoC Project Ideas
 ---
 
-Below, you can find some ideas on the directions in which we could push Polypheny together. Please consider them as starting points for your proposal. Of course, if you have other ideas, we would be very happy to hear them. Feel free to [contact us](/community/gsoc/#contact) and get feedback on what you plan to do beforehand.
+Below, you can find some ideas on the directions in which we could jointly push Polypheny forward. Please consider them as starting points for your proposal. Of course, if you have other ideas, we would be very happy to hear them. Feel free to [contact us](/community/gsoc/#contact) and get feedback on what you plan to do beforehand.
 
-Simply copying and pasting one of the ideas will not work. On the other hand, creating a completely new idea without first [consulting](/community/gsoc/#contact) the mentors won’t work as well.
+Simply copying and pasting one of the ideas will not work. On the other hand, creating a completely new idea without first [consulting](/community/gsoc/#contact) the mentors might be difficult as well.
 {:.message}
 
 * this unordered seed list will be replaced by toc as unordered list
@@ -22,7 +22,7 @@ Due to Polypheny's ability to join and combine data from different adapters in o
 
 
 ## Quality check and assurance
-A major problem in the process of developing any kind of software is to ensure that a change does not introduce any bugs in a completely different subsystem of the software. For a database system this also includes to ensure the completeness and correctness of the results of a query.
+A major problem in the process of developing any kind of software is to ensure that a change does not introduce new bugs in a completely different subsystem of the software. For a database system this also includes to ensure the completeness and correctness of the results of a query.
 
 Continuously and automatically checking that a system behaves and works like expected is therefore important to ensure consistent software quality and to avoid regressions. Usually, this is done using unit tests and integration tests. While unit tests check that individual parts (units) of the code (typically individual methods) work as expected, integration testing checks if the whole application works correctly.
 
@@ -60,7 +60,7 @@ A proposal for this project should contain a concept on how read and write queri
 
 
 ## Keep them all     
-A multi-version database system allows to store multiple versions of the same entry. This allows, for example, in a human resources database to not only query the current salary of an employee, but also the salary he had two years ago.  
+A multi-version database system allows to store multiple versions of the same entry. This allows, for example, in a human resources database to not only query the current salary of an employee, but also the salary they had two years ago.  
 
 The goal of this project is to extend Polypheny-DB to transparently support storing multiple versions of an element including a full referential integrity for the past revisions. 
 
@@ -71,6 +71,13 @@ The project includes
 
 **Difficulty**: hard
 
+
+## A question of freshness
+The goal of this project is to build a freshness-aware routing component for the Polypheny which is capable of handling stores with different levels of data freshness. Depending on the freshness required by queries in the workload, the system should autonomously decide if it makes sense to postpone updating some of the data stores until there is less load on the system to refresh them.
+
+The required freshness is specified by the client as part of the query. The project includes the definition of an appropriate SQL syntax and the extension of the parser to support this syntax.
+
+**Difficulty**: medium
 
 
 ## Physical query plan builder
