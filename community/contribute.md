@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Get involved
+title: Getting involved
 ---
 
 We highly welcome your contributions to Polypheny. If you would like to contribute, please fork the repository and submit your changes as a pull request. Please consult the documentation section of this Website for additional information.

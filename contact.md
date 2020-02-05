@@ -6,7 +6,7 @@ description: >
 hide_description: true
 ---
 
-Polypheny is a research project of the [Databases and Information Systems (DBIS) Group](https://dbis.dmi.unibas.ch/") at the [University of Basel](https://unibas.ch/).
+Polypheny is a research project that emerged from the [Databases and Information Systems (DBIS) Group](https://dbis.dmi.unibas.ch/) at the [University of Basel](https://unibas.ch/).
 
 
 ## Address
