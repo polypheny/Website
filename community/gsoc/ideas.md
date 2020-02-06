@@ -90,3 +90,12 @@ To get an impression how a physical query plan in Polypheny looks like you can s
 **Difficulty**: medium
 
 
+## Polypheny goes semantics 
+Triple stores such as RDF manage data together with semantic relationships. The aim of this project is to build an adapter for integrating RDF stores into Polypheny and to support semantic queries, i.e., queries that leverage these semantic relationships.
+
+An optional extension of this project is the integration of SPARQL into Polypheny, for instance by mapping SPARQL to SQL.
+
+**Difficulty**: medium-hard
+
+
+
