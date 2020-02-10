@@ -76,5 +76,5 @@ This is the mentoring team for the GSoC 2020.
 
 Please feel free to contact us if you have any questions. To make it easier for us to organize our emails, please add "GSoC 2020" in your subject line. 
 
-{% include button.html button_name="mailto:mail@polypheny.org" onclick="location.href='mailto:mail@polypheny.org?subject=[GSoC 2020]';" button_class="primary" %}
+{% include button.html button_name="mail@polypheny.org" onclick="location.href='mailto:mail@polypheny.org?subject=[GSoC 2020]';" button_class="primary" %}
 
