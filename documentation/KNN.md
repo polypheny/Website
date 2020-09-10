@@ -12,7 +12,7 @@ The general function syntax for knn is: `knn(<target column>, <vector to compare
 
 ### Optimisation term
 The optimisation term is useful for improving query performance.
-It means that an underlying store may only return the `n` closest results (i.e. smallest metric).
+It means that an underlying store may return only the `n` closest results (i.e. smallest metric).
 
 The term does not guarantee that `n` results will be returned, a store can return more results (or less if there are less entries present).
 
