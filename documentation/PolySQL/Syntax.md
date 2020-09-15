@@ -1,6 +1,6 @@
 ---
 layout: page
-title: PolySQL
+title: PolySQL Syntax
 ---
 
 The page describes the SQL dialect recognized by Polypheny-DB's default SQL parser in a [BNF](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_Form)-like form.

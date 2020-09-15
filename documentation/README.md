@@ -17,6 +17,7 @@ Here you should be able to find everything you need to know to use and interact 
 ## Using Polypheny-DB
 * [Types]{:.heading.flip-title} --- Overview on the type system.
 * [PolySQL]{:.heading.flip-title} --- The syntax of our SQL dialect.
+* [REST]{:.heading.flip-title} --- How to use the REST-based query interface.
 * [Stores]{:.heading.flip-title} --- Overview on the supported stores.
 {:.related-posts.faded}
 
@@ -32,7 +33,8 @@ Here you should be able to find everything you need to know to use and interact 
 [Overview]: Overview.md
 [Setup]: Setup.md
 [Types]: Types.md
-[PolySQL]: PolySQL.md
+[PolySQL]: PolySQL/README.md
+[REST]: REST.md
 [Stores]: Stores.md
 [GitHub Labels]: Labels.md
 [Logging]: Logging.md
