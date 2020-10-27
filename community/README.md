@@ -12,7 +12,7 @@ On this page you find news on what happens around Polypheny.
 * [Code of Conduct]{:.heading.flip-title} --- Our code of conduct.
 * [Logo]{:.heading.flip-title} --- Our logo in various formats.
 * [License]{:.heading.flip-title} --- The license of this project.
-* [Acknowledgements] -- A place where we thank those supporting us.
+* [Acknowledgements]{:.heading.flip-title} --- A place where we thank those supporting us.
 {:.related-posts.faded}
 
 [The Team]: team.md
