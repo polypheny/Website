@@ -38,3 +38,18 @@ nested arrays within nested arrays.
 The _cardinality_ specifies the number of elements (values and nested arrays) in every 
 (nested) array. 
 
+
+## Multimedia and File Types
+
+Polypheny-DB natively supports storing files. In addition to the generic `FILE` data type 
+there are also additional types for multimedia content. Multimedia files are not checked 
+by their file extension, but by their content type. 
+See [SimpleMagic.ContentType](https://github.com/j256/simplemagic/blob/master/src/main/java/com/j256/simplemagic/ContentType.java) for more information.
+
+| Type      | Description                                                                                                                                                       |
+|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Audio     | Accepted content types: AIFF, AUDIO_MPEG, MIDI, REAL_AUDIO, WAV |
+| File      | Accepts files of any type. |
+| Image     | Accepted content types: APPLE_QUICKTIME_IMAGE, BMP, GIF, JPEG, JPEG_2000, PBM, PGM, PNG, PPM, SVG, TIFF |
+| Video     | Accepted content types: APPLE_QUICKTIME_MOVIE, AVI, MNG, MP4A, MP4V, VIDEO_MPEG |
+
