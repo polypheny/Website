@@ -5,7 +5,7 @@ title: Types
 
 This page gives an overview about the data types supported by Polypheny.
 
-## Scalar types
+## Scalar Types
 
 | Type      | Description                                                                                                                                                       |
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -23,7 +23,7 @@ This page gives an overview about the data types supported by Polypheny.
 | Varchar   | String (can contain letters, numbers, and special characters) with variable length. The maximum length is specified as parameter.                                 |
 
 
-## Array types
+## Array Types
 
 An array is an ordered, contiguous collection that may contain duplicates. Polypheny-DB 
 supports arrays of all scalar types.
