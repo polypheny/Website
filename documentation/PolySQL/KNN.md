@@ -8,21 +8,17 @@ hide_description: true
 k-nearest-neighbour search functionality is a way to find entries based on their distance to a specific vector.
 
 ## Function syntax
-The general function syntax for knn is: `knn(<target column>, <vector to compare with>, <metric> [, <weights>] [, <optimisation term>])`.
+The general function syntax for knn is: `distance(<target column>, <vector to compare with>, <metric> [, <weights>])`.
 
-### Optimisation term
-The optimisation term is useful for improving query performance.
-It means that an underlying store may return only the `n` closest results (i.e. smallest metric).
+## KNN syntax
+To express a k-Nearest-Neighbour search in SQL, you can combine the `distance` function with a `LIMIT` and `ORDER BY` clause.
 
-The term does not guarantee that `n` results will be returned, a store can return more results (or less if there are less entries present).
 
 ## Examples
 
 {% highlight sql %}
-SELECT id, knn(arraycolumn, ARRAY[...], 'L2') FROM tablewitharraycolumn;
-SELECT id, knn(arraycolumn, ARRAY[...], 'L2', ARRAY[...]) FROM tablewitharraycolumn;
-SELECT id, knn(arraycolumn, ARRAY[...], 'L2', 100) FROM tablewitharraycolumn;
-SELECT id, knn(arraycolumn, ARRAY[...], 'L2', ARRAY[...], 100) FROM tablewitharraycolumn;
+SELECT id, distance(arraycolumn, ARRAY[...], 'L2') as dist FROM tablewitharraycolumn ORDER BY dist ASC LIMIT 100;
+SELECT id, distance(arraycolumn, ARRAY[...], 'L2', ARRAY[...]) as dist FROM tablewitharraycolumn ORDER BY dist ASC LIMIT 100;
 {% endhighlight %}
 
 
