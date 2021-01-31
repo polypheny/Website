@@ -5,6 +5,8 @@ title: CSV Adapter
 
 The CSV data source adapter allows to query CSV files as relational tables. Please make sure that the first line of your CSV files contains a header according to the specification bellow.  The adapter supports multiple CSV files. Every file is represented as a table using the filename as table name. Make sure that the file name contains no spaces. The adapter also supports files compressed using gzip. The file name must either end with '.csv' or '.csv.gz'.
 
+The CSV adapter is read-only. DML queries are not supported. The content of the file can be changed as long as the schema (number of columns and there type) is not changed.
+
 
 ## Adapter Settings
 
@@ -51,4 +53,20 @@ id:long,name:string,level:int,birthday:date,fulltime:boolean,start:time,last_upd
 {% endhighlight %}
 
 
+## Deployment
 
+The adapter can either be deployed using the Polypheny-UI (Adapters -> Sources) or using the following SQL statement:
+
+{% highlight sql %}
+ALTER ADAPTERS ADD uniqueName using 'org.polypheny.db.adapter.csv.CsvSource' with '{directory:"csvFolder",maxStringLength:"255"}'
+{% endhighlight %}
+
+Please make sure to adjust `csvFolder` and the `maxStringLength` according to your needs.
+
+After successful deployment, all CSV files are mapped as a table in the public schema. The tables and columns can be renamed. Furthermore, columns can be reordered and dropped if they are not required (they are not deleted from the file). If you have changed your mind, dropped columns can be added again using the Polypheny-UI or this special SQL statement:
+
+{% highlight sql %}
+ALTER TABLE tableName ADD COLUMN physicalName AS name
+{% endhighlight %}
+
+`physicalName` referes to the name specified in the header of the CSV file. 

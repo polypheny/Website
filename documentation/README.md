@@ -18,7 +18,8 @@ Here you should be able to find everything you need to know to use and interact 
 * [Types]{:.heading.flip-title} --- Overview on the type system.
 * [PolySQL]{:.heading.flip-title} --- The syntax of our SQL dialect.
 * [REST]{:.heading.flip-title} --- How to use the REST-based query interface.
-* [Stores]{:.heading.flip-title} --- Overview on the supported stores.
+* [Stores]{:.heading.flip-title} --- Overview on the supported data stores.
+* [Sources]{:.heading.flip-title} --- Overview on the supported data sources.
 {:.related-posts.faded}
 
 ## For developers
@@ -36,6 +37,7 @@ Here you should be able to find everything you need to know to use and interact 
 [PolySQL]: PolySQL/README.md
 [REST]: REST.md
 [Stores]: Stores.md
+[Sources]: Sources/README.md
 [GitHub Labels]: Labels.md
 [Logging]: Logging.md
 [Documentation Guidelines]: Documentation.md
