@@ -9,8 +9,6 @@ The page describes the SQL dialect recognized by Polypheny-DB's default SQL pars
 {% highlight sql %}
 statement:
       alterStatement
-  |   explain
-  |   describe
   |   insert
   |   update
   |   merge
@@ -21,50 +19,39 @@ alterStatement:
        ALTER ( SYSTEM | SESSION ) SET identifier '=' expression
      | ALTER ( SYSTEM | SESSION ) RESET identifier
      | ALTER ( SYSTEM | SESSION ) RESET ALL
-     | ALTER SCHEMA [ databaseName . ] schemaName RENAME TO newSchemaName  
-     | ALTER SCHEMA [ databaseName . ] schemaName OWNER TO userName  
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName RENAME TO newTableName  
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName OWNER TO userName
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName RENAME COLUMN columnName TO newColumnName
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName DROP COLUMN columnName
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName ADD COLUMN columnName type [ NULL | NOT NULL ] [DEFAULT defaultValue] [(BEFORE | AFTER) columnName]
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName MODIFY COLUMN columnName SET NOT NULL
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName MODIFY COLUMN columnName DROP NOT NULL
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName MODIFY COLUMN columnName SET COLLATION collation
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName MODIFY COLUMN columnName SET DEFAULT value
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName MODIFY COLUMN columnName DROP DEFAULT
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName MODIFY COLUMN columnName SET TYPE type
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName MODIFY COLUMN columnName SET POSITION ( BEFORE | AFTER ) columnName
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName ADD PRIMARY KEY ( columnName | '(' columnName [ , columnName ]* ')' )
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName DROP PRIMARY KEY
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName ADD CONSTRAINT constraintName UNIQUE ( columnName| '(' columnName [ , columnName ]* ')' )
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName DROP CONSTRAINT constraintName
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName ADD CONSTRAINT foreignKeyName FOREIGN KEY ( columnName | '(' columnName [ , columnName ]* ')' ) REFERENCES [ databaseName . ] [ schemaName . ] tableName '(' columnName [ , columnName ]* ')' [ ON UPDATE ( CASCADE | RESTRICT | SET NULL | SET DEFAULT ) ] [ ON DELETE ( CASCADE | RESTRICT | SET NULL | SET DEFAULT ) ]
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName DROP FOREIGN KEY foreignKeyName
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName ADD [UNIQUE] INDEX indexName ON ( columnName | '(' columnName [ , columnName ]* ')' ) [ USING indexType ]
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName DROP INDEX indexName
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName ADD PLACEMENT [( columnName | '(' columnName [ , columnName ]* ')' )] ON STORE storeUniqueName
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName MODIFY PLACEMENT ( ADD | DROP ) COLUMN columnName ON STORE storeUniqueName
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName MODIFY PLACEMENT '(' columnName [ , columnName ]* ')' ON STORE storeUniqueName 
-     | ALTER TABLE [ databaseName . ] [ schemaName . ] tableName DROP PLACEMENT ON STORE storeUniqueName
+     | ALTER SCHEMA schemaName RENAME TO newSchemaName  
+     | ALTER SCHEMA schemaName OWNER TO userName  
+     | ALTER TABLE [ schemaName . ] tableName RENAME TO newTableName  
+     | ALTER TABLE [ schemaName . ] tableName OWNER TO userName
+     | ALTER TABLE [ schemaName . ] tableName RENAME COLUMN columnName TO newColumnName
+     | ALTER TABLE [ schemaName . ] tableName DROP COLUMN columnName
+     | ALTER TABLE [ schemaName . ] tableName ADD COLUMN columnName type [ NULL | NOT NULL ] [DEFAULT defaultValue] [(BEFORE | AFTER) columnName]
+     | ALTER TABLE [ schemaName . ] tableName ADD COLUMN columnName physicalName AS name [DEFAULT defaultValue] [(BEFORE | AFTER) columnName]
+     | ALTER TABLE [ schemaName . ] tableName MODIFY COLUMN columnName SET NOT NULL
+     | ALTER TABLE [ schemaName . ] tableName MODIFY COLUMN columnName DROP NOT NULL
+     | ALTER TABLE [ schemaName . ] tableName MODIFY COLUMN columnName SET COLLATION collation
+     | ALTER TABLE [ schemaName . ] tableName MODIFY COLUMN columnName SET DEFAULT value
+     | ALTER TABLE [ schemaName . ] tableName MODIFY COLUMN columnName DROP DEFAULT
+     | ALTER TABLE [ schemaName . ] tableName MODIFY COLUMN columnName SET TYPE type
+     | ALTER TABLE [ schemaName . ] tableName MODIFY COLUMN columnName SET POSITION ( BEFORE | AFTER ) columnName
+     | ALTER TABLE [ schemaName . ] tableName ADD PRIMARY KEY ( columnName | '(' columnName [ , columnName ]* ')' )
+     | ALTER TABLE [ schemaName . ] tableName DROP PRIMARY KEY
+     | ALTER TABLE [ schemaName . ] tableName ADD CONSTRAINT constraintName UNIQUE ( columnName| '(' columnName [ , columnName ]* ')' )
+     | ALTER TABLE [ schemaName . ] tableName DROP CONSTRAINT constraintName
+     | ALTER TABLE [ schemaName . ] tableName ADD CONSTRAINT foreignKeyName FOREIGN KEY ( columnName | '(' columnName [ , columnName ]* ')' ) REFERENCES [ schemaName . ] tableName '(' columnName [ , columnName ]* ')' [ ON UPDATE ( CASCADE | RESTRICT | SET NULL | SET DEFAULT ) ] [ ON DELETE ( CASCADE | RESTRICT | SET NULL | SET DEFAULT ) ]
+     | ALTER TABLE [ schemaName . ] tableName DROP FOREIGN KEY foreignKeyName
+     | ALTER TABLE [ schemaName . ] tableName ADD [UNIQUE] INDEX indexName ON ( columnName | '(' columnName [ , columnName ]* ')' ) [ USING indexMethod ] [ ON STORE storeName ]
+     | ALTER TABLE [ schemaName . ] tableName DROP INDEX indexName
+     | ALTER TABLE [ schemaName . ] tableName ADD PLACEMENT [( columnName | '(' columnName [ , columnName ]* ')' )] ON STORE storeUniqueName
+     | ALTER TABLE [ schemaName . ] tableName MODIFY PLACEMENT ( ADD | DROP ) COLUMN columnName ON STORE storeUniqueName
+     | ALTER TABLE [ schemaName . ] tableName MODIFY PLACEMENT '(' columnName [ , columnName ]* ')' ON STORE storeUniqueName 
+     | ALTER TABLE [ schemaName . ] tableName DROP PLACEMENT ON STORE storeUniqueName
      | ALTER CONFIG key SET value
-     | ALTER STORES ADD storeName USING adapterClass WITH config 
-     | ALTER STORES DROP storeName
+     | ALTER ADAPTERS ADD uniqueName USING adapterClass WITH config 
+     | ALTER ADAPTERS DROP uniqueName
+     | ALTER INTERFACES ADD uniqueName USING clazzName WITH config 
+     | ALTER INTERFACES DROP uniqueName
      
-explain:
-      EXPLAIN PLAN
-      [ WITH TYPE | WITH IMPLEMENTATION | WITHOUT IMPLEMENTATION ]
-      [ EXCLUDING ATTRIBUTES | INCLUDING [ ALL ] ATTRIBUTES ]
-      [ AS JSON | AS XML ]
-      FOR ( query | insert | update | merge | delete )
-
-describe:
-      DESCRIBE DATABASE databaseName
-   |  DESCRIBE CATALOG [ databaseName . ] catalogName
-   |  DESCRIBE SCHEMA [ [ databaseName . ] catalogName ] . schemaName
-   |  DESCRIBE [ TABLE ] [ [ [ databaseName . ] catalogName . ] schemaName . ] tableName [ columnName ]
-   |  DESCRIBE [ STATEMENT ] ( query | insert | update | merge | delete )
-
 insert:
       ( INSERT | UPSERT ) INTO tablePrimary
       [ '(' column [, column ]* ')' ]
