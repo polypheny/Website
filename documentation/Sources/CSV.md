@@ -3,14 +3,16 @@ layout: page
 title: CSV Adapter
 ---
 
-The CSV data source adapter allows to query CSV files as relational tables. Please make sure that the first line of your CSV files contains a header according to the specification bellow.  The adapter supports multiple CSV files. Every file is represented as a table using the filename as table name. Make sure that the file name contains no spaces. The adapter also supports files compressed using gzip. The file name must either end with `.csv` or `.csv.gz`.
+The CSV data source adapter allows to query CSV files as relational tables. Please make sure that the first line of your CSV files contain a header according to the specification bellow. The adapter supports multiple CSV files. Every file is represented as a table using the filename as table name. Make sure that the file name contains no spaces. The adapter also supports files compressed using gzip. The file name must either end with `.csv` or `.csv.gz`.
 
-The CSV adapter is read-only. DML queries are not supported. The content of the file can be changed as long as the schema (number of columns and there type) is not changed.
+The CSV adapter is read-only. DML queries are not supported. The content of the file can be changed in the background as long as the schema (number of columns and there type) is not changed.
+
+The first column is taken as primary key. Therefore, it may only contain unique values. Please notice that the CSV adapter does not support null values.
 
 
 ## Adapter Settings
 
-The CSV adapter has to settings: 
+The CSV adapter has two settings: 
 
 | Setting         | Description                                                                                                                                                       |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -49,7 +51,7 @@ The CSV adapter supports the following data types:
 {% highlight csv %}
 id:long,name:string,level:int,birthday:date,fulltime:boolean,start:time,last_update:timestamp,tfloat:float,tdouble:double
 1,Alice,9,1992-11-14,true,08:00:00,2021-01-30 13:30:04+00:00,1.999,2.333
-2,"Hans Wurst",6,1989-08-01,0,08:15:00,2020-11-01 09:05:12.111,0.1,999.999999
+2,"Wurst, Hans",6,1989-08-01,0,08:15:00,2020-11-01 09:05:12.111,0.1,999.999999
 {% endhighlight %}
 
 
