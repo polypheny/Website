@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sources
+title: Data Sources
 ---
 
 Polypheny currently supports the following data source adapters:

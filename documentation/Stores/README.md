@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Stores
+title: Data Stores
 ---
 
 Polypheny currently supports the following data stores:

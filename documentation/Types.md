@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Types
+title: Data Types
 ---
 
 This page gives an overview about the data types supported by Polypheny.

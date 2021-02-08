@@ -1,5 +1,5 @@
 ---
-title:  k-Nearest-Neighbor (KNN)
+title:  k-Nearest-Neighbor Search
 description: >
   How to use k-nearest-neighbour search in Polypheny.
 hide_description: true

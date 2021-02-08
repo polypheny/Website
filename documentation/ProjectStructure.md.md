@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Overview
+title: Project Structure
 ---
 
 The Polypheny stack consists out of several parts. This page gives an overview about the different parts of the stack.

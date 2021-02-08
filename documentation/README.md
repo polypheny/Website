@@ -14,15 +14,32 @@ Here you should be able to find everything you need to know to use and interact 
 * [Setup]{:.heading.flip-title} --- How to setup and run Polypheny.
 {:.related-posts.faded}
 
+
 ## Using Polypheny-DB
-* [Types]{:.heading.flip-title} --- Overview on the type system.
-* [PolySQL]{:.heading.flip-title} --- The syntax of our SQL dialect.
-* [REST]{:.heading.flip-title} --- How to use the REST-based query interface.
-* [Stores]{:.heading.flip-title} --- Overview on the supported data stores.
-* [Sources]{:.heading.flip-title} --- Overview on the supported data sources.
+* [Data Types]{:.heading.flip-title} --- Overview on the type system.
+* [Identifiers]{:.heading.flip-title} --- Identifier names.
+* [SchemaModel]{:.heading.flip-title} --- Overview on the schema model.
+* [Data Stores]{:.heading.flip-title} --- Supported data stores.
+* [Data Sources]{:.heading.flip-title} --- Available data source adapters.
 {:.related-posts.faded}
 
+
+## PolySQL Query Language
+* [Syntax]{:.heading.flip-title} --- The syntax of our SQL dialect.
+* [Operators]{:.heading.flip-title} --- Supported operators and functions.
+* [kNN Search]{:.heading.flip-title} --- How to use k-nearest-neighbour search in Polypheny.
+* [Schema Definition and Manipulation]{:.heading.flip-title} --- The syntax for defining and manipulating the schema.
+* [System Management]{:.heading.flip-title} --- Managing Polypheny-DB using SQL statements.
+{:.related-posts.faded}
+
+
+## REST-based Query Interface
+* [Structure]{:.heading.flip-title} --- The structure of queries against the REST-based query interface.
+{:.related-posts.faded}
+
+
 ## For developers
+* [Project Structure]{:.heading.flip-title} --- Basic overview on the different parts of Polypheny.
 * [GitHub Labels]{:.heading.flip-title} --- Best practices for handling issues and pull requests.
 * [Logging]{:.heading.flip-title} --- Dealing with the logger.
 * [Documentation Guidelines]{:.heading.flip-title} --- What and how to document.
@@ -31,13 +48,20 @@ Here you should be able to find everything you need to know to use and interact 
 {:.related-posts.faded}
 
 
-[Overview]: Overview.md
 [Setup]: Setup.md
-[Types]: Types.md
-[PolySQL]: PolySQL/README.md
-[REST]: REST.md
-[Stores]: Stores.md
-[Sources]: Sources/README.md
+
+[Data Types]: Types.md
+[Data Stores]: Stores/README.md
+[Data Sources]: Sources/README.md
+
+[Syntax]: PolySQL/Syntax.md
+[kNN Search]: PolySQL/KNN.md
+
+
+[Structure]: REST/Structure.md
+
+
+[Project Structure]: ProjectStructure.md
 [GitHub Labels]: Labels.md
 [Logging]: Logging.md
 [Documentation Guidelines]: Documentation.md
