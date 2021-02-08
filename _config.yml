@@ -192,6 +192,8 @@ hydejack:
   # You can set this to `true` if you don't want to set the `theme-color` meta tag,
   # This only affects the meta tag, not the color specified in the app manifest.
   no_theme_color:      false
+  
+  no_breadcrumbs:      false
 
   # Set to `true` when building with the `--lsi` option
   # This will increase site build speed!
@@ -284,7 +286,7 @@ plugins:
 # ---------------------------------------------------------------------------------------
 
 # theme: jekyll-theme-hydejack
-remote_theme: qwtel/hydejack@v9.0.5
+remote_theme: qwtel/hydejack@v9.1.1
 
 # SEO Tag
 # ---------------------------------------------------------------------------------------
