@@ -18,7 +18,7 @@ Here you should be able to find everything you need to know to use and interact 
 ## Using Polypheny-DB
 * [Data Types]{:.heading.flip-title} --- Overview on the type system.
 * [Identifiers]{:.heading.flip-title} --- Identifier names.
-* [SchemaModel]{:.heading.flip-title} --- Overview on the schema model.
+* [Schema Model]{:.heading.flip-title} --- Overview on the schema model.
 * [Data Stores]{:.heading.flip-title} --- Supported data stores.
 * [Data Sources]{:.heading.flip-title} --- Available data source adapters.
 {:.related-posts.faded}
