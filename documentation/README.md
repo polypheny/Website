@@ -10,14 +10,13 @@ Here you should be able to find everything you need to know to use and interact 
 
 
 ## Getting started
-* [Overview]{:.heading.flip-title} --- Get a basic overview on the different parts of Polypheny.
+* [Overview]{:.heading.flip-title} --- Basic overview on the architecture of Polypheny.
 * [Setup]{:.heading.flip-title} --- How to setup and run Polypheny.
 {:.related-posts.faded}
 
 
 ## Using Polypheny-DB
 * [Data Types]{:.heading.flip-title} --- Overview on the type system.
-* [Identifiers]{:.heading.flip-title} --- Identifier names.
 * [Schema Model]{:.heading.flip-title} --- Overview on the schema model.
 * [Data Stores]{:.heading.flip-title} --- Supported data stores.
 * [Data Sources]{:.heading.flip-title} --- Available data source adapters.

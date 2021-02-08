@@ -1,7 +1,12 @@
 ---
+layout: page
 title: Operators and Functions
-hide_description: true
 ---
+
+This page outlines the available SQL operators and functions supported by Polypheny-DB.
+
+* this unordered seed list will be replaced by toc as unordered list
+{:toc}
 
 ### Operator precedence
 
@@ -204,5 +209,4 @@ standard SQL. Calls with parentheses, such as `CURRENT_DATE()` are accepted in c
 
 
 <br>
-Parts of this documentation are based on [Calcite SQL Reference](https://calcite.apache.org/docs/reference.html).
-{:.note}
+_Parts of this documentation are based on [Calcite SQL Reference](https://calcite.apache.org/docs/reference.html)._
