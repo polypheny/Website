@@ -33,7 +33,7 @@ Here you should be able to find everything you need to know to use and interact 
 
 
 ## REST-based Query Interface
-* [Structure]{:.heading.flip-title} --- The structure of queries against the REST-based query interface.
+* [Structure]{:.heading.flip-title} --- The structure of queries for the REST-based query interface.
 {:.related-posts.faded}
 
 

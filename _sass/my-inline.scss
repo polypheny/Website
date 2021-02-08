@@ -1,8 +1,5 @@
 // You can add CSS rules here that will be inlined into each document.
-#_navbar{
-	display: none;
-}
-@media (max-width : 1000px) {
+@media (min-width : 1000px) {
 	#_navbar{
 		display: none;
 	}
