@@ -112,6 +112,8 @@ comp:
 | SIN(numeric)              | Returns the sine of *numeric*
 | TAN(numeric)              | Returns the tangent of *numeric*
 | TRUNCATE(numeric1 [, numeric2]) | Truncates *numeric1* to optionally *numeric2* (if not specified 0) places right to the decimal point
+| distance(array1, array2, metric) | See [knn Search](KNN.md) for details.
+| distance(array1, array2, metric, weights) | See [knn Search](KNN.md) for details.
 
 
 ### Character string operators and functions
@@ -201,5 +203,6 @@ standard SQL. Calls with parentheses, such as `CURRENT_DATE()` are accepted in c
 | ARRAY '[' value [, value ]* ']' | Creates an array from a list of values.
 
 
-Parts of this documentation are based on https://calcite.apache.org/docs/reference.html.
+<br>
+Parts of this documentation are based on [Calcite SQL Reference](https://calcite.apache.org/docs/reference.html).
 {:.note}

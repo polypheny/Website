@@ -26,10 +26,10 @@ Here you should be able to find everything you need to know to use and interact 
 
 ## PolySQL Query Language
 * [Syntax]{:.heading.flip-title} --- The syntax of our SQL dialect.
-* [Operators]{:.heading.flip-title} --- Supported operators and functions.
+* [Operators and Functions]{:.heading.flip-title} --- Supported operators and functions.
 * [kNN Search]{:.heading.flip-title} --- How to use k-nearest-neighbour search in Polypheny.
 * [Schema Definition and Manipulation]{:.heading.flip-title} --- The syntax for defining and manipulating the schema.
-* [System Management]{:.heading.flip-title} --- Managing Polypheny-DB using SQL statements.
+* [System Management]{:.heading.flip-title} --- Managing Polypheny using SQL statements.
 {:.related-posts.faded}
 
 
@@ -55,6 +55,7 @@ Here you should be able to find everything you need to know to use and interact 
 [Data Sources]: Sources/README.md
 
 [Syntax]: PolySQL/Syntax.md
+[Operators and Functions]: PolySQL/Operators.md
 [kNN Search]: PolySQL/KNN.md
 
 
