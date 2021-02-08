@@ -1,4 +1,5 @@
 ---
+layout: plain
 title: UI Development Environment
 description: >
   How to setup-up a Polypheny-UI development environment.

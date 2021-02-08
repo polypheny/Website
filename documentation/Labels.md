@@ -1,4 +1,5 @@
 ---
+layout: plain
 title: GitHub Labels
 description: >
   Best practices related to using Github Labels for Issues and Pull Requests.

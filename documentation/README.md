@@ -1,4 +1,5 @@
 ---
+layout: plain
 title: Documentation
 description: >
   This chapters contains information on how to use the Polypheny stack.

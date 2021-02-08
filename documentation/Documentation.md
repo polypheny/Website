@@ -1,4 +1,5 @@
 ---
+layout: plain
 title:  Documentation Guidelines
 description: >
   Best practices for code documentation in Polypheny.

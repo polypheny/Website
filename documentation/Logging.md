@@ -1,4 +1,5 @@
 ---
+layout: plain
 title: Logging
 description: >
   How to handle logging in Polypheny.

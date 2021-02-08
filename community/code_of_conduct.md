@@ -1,4 +1,5 @@
 ---
+layout: plain
 title: Code of Conduct
 description: >
   Our code of conduct.

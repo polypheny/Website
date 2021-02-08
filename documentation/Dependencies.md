@@ -1,4 +1,5 @@
 ---
+layout: plain
 title: Dependency Management
 description: >
   Best practices for including java dependencies via gradle in Polypheny-DB.

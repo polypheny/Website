@@ -1,4 +1,5 @@
 ---
+layout: plain
 title:  REST Query Interface
 description: >
   How to use the REST-based query interface.

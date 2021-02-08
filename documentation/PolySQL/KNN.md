@@ -1,4 +1,5 @@
 ---
+layout: plain
 title:  k-Nearest-Neighbor Search
 description: >
   How to use k-nearest-neighbour search in Polypheny.
