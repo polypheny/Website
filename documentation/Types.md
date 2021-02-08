@@ -5,6 +5,9 @@ title: Data Types
 
 This page gives an overview about the data types supported by Polypheny.
 
+* this unordered seed list will be replaced by toc as unordered list
+{:toc}
+
 ## Scalar Types
 
 | Type      | Description                                                                                                                                                                             |
