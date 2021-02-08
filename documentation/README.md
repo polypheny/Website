@@ -51,6 +51,7 @@ Here you should be able to find everything you need to know to use and interact 
 [Setup]: Setup.md
 
 [Data Types]: Types.md
+[Schema Model]: SchemaModel.md
 [Data Stores]: Stores/README.md
 [Data Sources]: Sources/README.md
 
