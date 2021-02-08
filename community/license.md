@@ -3,13 +3,12 @@ layout: page
 title: License
 ---
 
-The Polypheny project uses two different licenses. Polypheny-DB is licensed under Apache 2.0 license. 
-All other parts of the project are licensed under the MIT license. 
+Polypheny-DB and a major part of the sub-projects is licensed under the Apache 2 licenses. Some of the drivers and clients are currently licensed under the MIT license. Please check the corresponding GitHub repository.
 
 
 ## Apache License
 
-Copyright 2019-2020 The Polypheny Project
+Copyright 2019-2021 The Polypheny Project
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -27,7 +26,7 @@ limitations under the License.
 
 ## MIT License
 
-Copyright (c) 2017-2020 The Polypheny Project
+Copyright (c) 2017-2021 The Polypheny Project
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

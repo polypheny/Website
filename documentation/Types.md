@@ -7,20 +7,20 @@ This page gives an overview about the data types supported by Polypheny.
 
 ## Scalar Types
 
-| Type      | Description                                                                                                                                                       |
-|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Bigint    | 8 bytes signed (two's complement). Ranges from `-9,223,372,036,854,775,808` to `9,223,372,036,854,775,807`.                                                       |
-| Boolean   | 1-bit. Takes the value `true` and `false`.                                                                                                                        |
-| Date      | Represents a date. Format: `yyyy-mm-dd`                                                                                                                           |
-| Decimal   | A decimal number is a number that can have a decimal point in it. This type has two arguments: _precision_ and _scale_. The scale can not exceed the precision.   |
-| Double    | 8 bytes IEEE 754. Covers a range from `4.94065645841246544e-324d` to `1.79769313486231570e+308d` (positive or negative).                                          |
-| Integer   | 4 bytes, signed (two's complement). Covers a range from `-2,147,483,648` to `2,147,483,647`.                                                                      |
-| Real      | 4 bytes, IEEE 754. Covers a range from `1.40129846432481707e-45` to `3.40282346638528860e+38` (positive or negative).                                             |
-| Smallint  | 2 bytes, signed (two's complement). Covers a range from `-32,768` to `32,767`.                                                                                    |
-| Time      | Represents a time of day without time zone. Can optionally be defined with a fractional second _precision_ between 0 and 3. Format: `hh:mm:ss.f`                  |
-| Timestamp | Represents a combination of DATE and TIME values. Can optionally be defined with a fractional second _precision_ between 0 and 3. Format: `yyyy-mm-dd hh:mm:ss.f` | 
-| Tinyint   | 1 byte, signed (two's complement). Covers a range from `-128` to `127`.                                                                                           |
-| Varchar   | String (can contain letters, numbers, and special characters) with variable length. The maximum length is specified as parameter.                                 |
+| Type      | Description                                                                                                                                                                             |
+|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| BIGINT    | 8 bytes signed (two's complement). Ranges from `-9,223,372,036,854,775,808` to `9,223,372,036,854,775,807`.                                                                             |
+| BOOLEAN   | 1-bit. Takes the value `true` and `false`.                                                                                                                                              |
+| DATE      | Represents a date. Format: `yyyy-mm-dd`                                                                                                                                                 |
+| DECIMAL   | A decimal number is a number that can have a decimal point in it. This type has two arguments: _precision_ and _scale_. The scale can not exceed the precision.                         |
+| DOUBLE    | 8 bytes IEEE 754. Covers a range from `4.94065645841246544e-324d` to `1.79769313486231570e+308d` (positive or negative).                                                                |
+| INTEGER   | 4 bytes, signed (two's complement). Covers a range from `-2,147,483,648` to `2,147,483,647`.                                                                                            |
+| REAL      | 4 bytes, IEEE 754. Covers a range from `1.40129846432481707e-45` to `3.40282346638528860e+38` (positive or negative).                                                                   |
+| SMALLINT  | 2 bytes, signed (two's complement). Covers a range from `-32,768` to `32,767`.                                                                                                          |
+| TIME      | Represents a time of day without time zone. Optionally, _precision_ can have a value between 0 and 3 specifying the number of fractional seconds. Format: `hh:mm:ss.f`                  |
+| TIMESTAMP | Represents a combination of DATE and TIME values. Optionally,_precision_ can have a value between 0 and 3 specifying the number of fractional seconds. Format: `yyyy-mm-dd hh:mm:ss.f`  | 
+| TINYINT   | 1 byte, signed (two's complement). Covers a range from `-128` to `127`.                                                                                                                 |
+| VARCHAR   | String (can contain letters, numbers, and special characters) with variable length. The maximum length is specified as parameter.                                                       |
 
 
 ## Array Types
@@ -48,8 +48,8 @@ See [SimpleMagic.ContentType](https://github.com/j256/simplemagic/blob/master/sr
 
 | Type      | Description                                                                                                                                                       |
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Audio     | Accepted content types: AIFF, AUDIO_MPEG, MIDI, REAL_AUDIO, WAV |
-| File      | Accepts files of any type. |
-| Image     | Accepted content types: APPLE_QUICKTIME_IMAGE, BMP, GIF, JPEG, JPEG_2000, PBM, PGM, PNG, PPM, SVG, TIFF |
-| Video     | Accepted content types: APPLE_QUICKTIME_MOVIE, AVI, MNG, MP4A, MP4V, VIDEO_MPEG |
+| SOUND     | Accepted content types: _AIFF_, _AUDIO/MPEG_, _MIDI_, _REAL/AUDIO_, _WAV_                                                                                         |
+| FILE      | Accepts files of any type.                                                                                                                                        |
+| IMAGE     | Accepted content types: _APPLE_QUICKTIME_IMAGE_, _BMP_, _GIF_, _JPEG_, _JPEG 2000_, _PBM_, _PGM_, _PNG_, _PPM_, _SVG_, _TIFF_                                     |
+| VIDEO     | Accepted content types: _APPLE_QUICKTIME_MOVIE_, _AVI_, _MNG_, _MP4A_, _MP4V_, _VIDEO/MPEG_                                                                       |
 
