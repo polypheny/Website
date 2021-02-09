@@ -58,10 +58,9 @@ Here you should be able to find everything you need to know to use and interact 
 [Syntax]: PolySQL/Syntax.md
 [Operators and Functions]: PolySQL/Operators.md
 [kNN Search]: PolySQL/KNN.md
-
+[System Management]: PolySQL/SystemManagement.md
 
 [Structure]: REST/Structure.md
-
 
 [Project Structure]: ProjectStructure.md
 [GitHub Labels]: Labels.md
