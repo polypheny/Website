@@ -37,11 +37,11 @@ Importing and exporting datasets and schemas can conveniently be done directly w
 
 
 ## Polypheny Client 
-Polypheny Client is a client for querying Polypheny-DB. It connects to Polypheny-DB via JDBC using the JDBC Driver. This client contains a [Chronos](https://github.com/chronos-eaas) connector. This allows to easily execute evaluation campaigns.
+Polypheny Client is a client for querying Polypheny-DB. It connects to Polypheny-DB via JDBC using the JDBC Driver. This client contains a [Chronos](https://chronos-eaas.org/) connector. This allows to easily execute evaluation campaigns.
 
 
 ## Polypheny Simple Client 
-A simple benchmarking and testing client for Polypheny. This client contains a [Chronos](https://github.com/chronos-eaas) connector. This allows to easily execute evaluation campaigns.
+A simple benchmarking and testing client for Polypheny. This client contains a [Chronos](https://chronos-eaas.org/) connector. This allows to easily execute evaluation campaigns.
 
 
 ## Query-by-Gesture Bridge 
