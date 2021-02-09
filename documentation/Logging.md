@@ -21,7 +21,6 @@ We use SLF4J as logging facade. Therefore, we have the following six log levels 
 6. fatal (the most serious)
 
 
-
 ## Logger Annotation
 
 We use Project Lombok for creating the logger field. It is therefore only required to add the `@Slf4j` Annotation to the class.
@@ -31,7 +30,7 @@ We use Project Lombok for creating the logger field. It is therefore only requir
 public class LogExample {
   
     public void foo() {
-        log.error("A sophisticated log message");
+        log.error( "A sophisticated log message" );
     }
   
 }
@@ -43,11 +42,19 @@ public class LogExample {
 The following code snippet shows how to log an exception:
  
 ```java
-log.error("An exception occurred!", new Exception("Custom exception"));
+log.error( "An exception occurred!", new Exception( "Custom exception" ) );
 ```
 
 Please do always log the whole exception object like showed above and do not call .getMessage() or similar. This ensures that the log output contains the stacktrace.
 
+
+## Avoid string concatenation
+
+Do not concatenate strings in logger calls. Use Use parameterized logger calls instead:
+
+```java
+log.info( "{} started and is listening on port {}.", name, getPort() );
+```
 
 
 ## Guards
@@ -56,9 +63,8 @@ Use appropriate logging levels and make sure that there are "guards" in front of
 
 ```java
 if ( log.isTrace() ) {
-
-    log.trace( "..." + foo + "..." + getSomething() + "..." );
-
+    Info info = collectInformation();
+	log.trace( "... {}", info.getSomething() );
 }
 ```
 
