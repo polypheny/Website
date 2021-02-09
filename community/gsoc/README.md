@@ -64,6 +64,8 @@ This is the mentoring team for the GSoC 2021.
 | Name              | Role             | Languages       |
 |-------------------|------------------|-----------------|
 | Nils Hansen       | Mentor           | English, German |
+| Marc Hennemann    | Mentor           | English, German |
+| Isabel Geissmann  | Mentor           | English, German |
 | David Lengweiler  | Mentor           | English, German |
 | Jan Schönholz     | Mentor           | English, German |
 | Heiko Schuldt     | Mentor, OrgAdmin | English, German |
