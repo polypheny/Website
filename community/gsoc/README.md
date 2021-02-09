@@ -48,7 +48,6 @@ Your proposal should include
 - details on how to implement your idea and
 - the GitHub id of your pull request.
 
-Please check our [Polypheny@GSoC]( https://polypheny.org/community/gsoc/) page for additional information and do not hesitate to contact us in case you have questions.
 
 
 
@@ -76,7 +75,7 @@ This is the mentoring team for the GSoC 2021.
 
 ## Contact
 
-Please feel free to contact us if you have any questions. To make it easier for us to organize our emails, please add "GSoC 2021" in your subject line. 
+Please feel free to contact us if you have any questions. To make it easier for us to organize our emails, please add "GSoC 2021" in the subject line. 
 
 {% include button.html button_name="mail@polypheny.org" onclick="location.href='mailto:mail@polypheny.org?subject=[GSoC 2021]';" button_class="primary" %}
 
