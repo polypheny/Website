@@ -8,10 +8,13 @@
 	}
 }
 @media (max-width : 1009px) {
-	img.nav-span {
+	div.nav-span {
 		content:url(https://polypheny.org/assets/logo-header.png);
 	}
 }
 hr.dingbat {
     display: none;
+}
+h1, h2, h3, .h1, .h2, .h3 {
+    margin-top: 3rem;
 }
