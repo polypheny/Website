@@ -12,6 +12,7 @@ title: PolySQL Query Language
 {:.related-posts.faded}
 
 
+[Basics]: Basics.md
 [Syntax]: Syntax.md
 [Operators and Functions]: Operators.md
 [kNN Search]: KNN.md

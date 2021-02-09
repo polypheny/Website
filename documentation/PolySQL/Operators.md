@@ -117,8 +117,8 @@ comp:
 | SIN(numeric)              | Returns the sine of *numeric*
 | TAN(numeric)              | Returns the tangent of *numeric*
 | TRUNCATE(numeric1 [, numeric2]) | Truncates *numeric1* to optionally *numeric2* (if not specified 0) places right to the decimal point
-| distance(array1, array2, metric) | See [knn Search](KNN.md) for details.
-| distance(array1, array2, metric, weights) | See [knn Search](KNN.md) for details.
+| distance(array1, array2, metric) | See [kNN Search](KNN.md) for details.
+| distance(array1, array2, metric, weights) | See [kNN Search](KNN.md) for details.
 
 
 ### Character string operators and functions
@@ -166,10 +166,6 @@ comp:
 | TIMESTAMPADD(timeUnit, integer, timestamp) | Returns *timestamp* with an interval of (signed) *integer* *timeUnit*s added.
 | TIMESTAMPDIFF(timeUnit, timestamp, timestamp2) | Returns the (signed) number of *timeUnit* intervals between *timestamp* and *timestamp2*. Equivalent to `(timestamp2 - timestamp) timeUnit`
 
-Calls to niladic functions such as `CURRENT_DATE` do not accept parentheses in
-standard SQL. Calls with parentheses, such as `CURRENT_DATE()` are accepted in certain
-[conformance levels]({{ site.apiRoot }}/org/polypheny/db/sql/validate/SqlConformance.html#allowNiladicParentheses--).
-
 
 ### System functions
 
@@ -187,8 +183,8 @@ standard SQL. Calls with parentheses, such as `CURRENT_DATE()` are accepted in c
 |:--------------- |:-----------
 | CASE value<br/>WHEN value1 [, value11 ]* THEN result1<br/>[ WHEN valueN [, valueN1 ]* THEN resultN ]*<br/>[ ELSE resultZ ]<br/> END | Simple case
 | CASE<br/>WHEN condition1 THEN result1<br/>[ WHEN conditionN THEN resultN ]*<br/>[ ELSE resultZ ]<br/>END | Searched case
-| NULLIF(value, value) | Returns NULL if the values are the same.<br/><br/>For example, <code>NULLIF(5, 5)</code> returns NULL; <code>NULLIF(5, 0)</code> returns 5.
-| COALESCE(value, value [, value ]*) | Provides a value if the first value is null.<br/><br/>For example, <code>COALESCE(NULL, 5)</code> returns 5.
+| NULLIF(value, value) | Returns NULL if the values are the same. For example, <code>NULLIF(5, 5)</code> returns NULL; <code>NULLIF(5, 0)</code> returns 5.
+| COALESCE(value, value [, value ]*) | Provides a value if the first value is null. For example, <code>COALESCE(NULL, 5)</code> returns 5.
 
 
 ### Type conversion
