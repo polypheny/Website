@@ -1,7 +1,13 @@
 // You can add CSS rules here that will be inlined into each document.
-@media (min-width : 1000px) {
+@media (min-width : 1010px) {
 	#_navbar{
 		display: none;
+	}
+}
+@media (min-width : 1009px) {
+	img.nav-span{
+		url(https://polypheny.org/assets/logo-header.png);
+		height: 50px;
 	}
 }
 hr.dingbat {
