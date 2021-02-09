@@ -12,8 +12,8 @@ title: PolySQL Query Language
 {:.related-posts.faded}
 
 
-[Syntax]: PolySQL/Syntax.md
-[Operators and Functions]: PolySQL/Operators.md
-[kNN Search]: PolySQL/KNN.md
-[Schema Manipulation]: PolySQL/DDL.md
-[System Management]: PolySQL/SystemManagement.md
+[Syntax]: Syntax.md
+[Operators and Functions]: Operators.md
+[kNN Search]: KNN.md
+[Schema Manipulation]: DDL.md
+[System Management]: SystemManagement.md

@@ -21,8 +21,6 @@ Here you should be able to find everything you need to know to use and interact 
 * [Schema Model]{:.heading.flip-title} --- Overview on the schema model.
 * [PolySQL]{:.heading.flip-title} --- The Polypheny SQL dialect
 * [REST]{:.heading.flip-title} --- How to use the REST-based query interface.
-* [Data Stores]{:.heading.flip-title} --- Supported data stores.
-* [Data Sources]{:.heading.flip-title} --- Available data source adapters.
 {:.related-posts.faded}
 
 
