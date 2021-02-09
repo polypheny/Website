@@ -19,22 +19,16 @@ Here you should be able to find everything you need to know to use and interact 
 ## Using Polypheny-DB
 * [Data Types]{:.heading.flip-title} --- Overview on the type system.
 * [Schema Model]{:.heading.flip-title} --- Overview on the schema model.
+* [PolySQL]{:.heading.flip-title} --- The Polypheny SQL dialect
+* [REST]{:.heading.flip-title} --- How to use the REST-based query interface.
 * [Data Stores]{:.heading.flip-title} --- Supported data stores.
 * [Data Sources]{:.heading.flip-title} --- Available data source adapters.
 {:.related-posts.faded}
 
 
-## PolySQL Query Language
-* [Syntax]{:.heading.flip-title} --- The syntax of our SQL dialect.
-* [Operators and Functions]{:.heading.flip-title} --- Supported operators and functions.
-* [kNN Search]{:.heading.flip-title} --- How to use k-nearest-neighbour search in Polypheny.
-* [Schema Definition and Manipulation]{:.heading.flip-title} --- The syntax for defining and manipulating the schema.
-* [System Management]{:.heading.flip-title} --- Managing Polypheny using SQL statements.
-{:.related-posts.faded}
-
-
-## REST-based Query Interface
-* [Structure]{:.heading.flip-title} --- The structure of queries for the REST-based query interface.
+## Administration
+* [Data Stores]{:.heading.flip-title} --- Supported data stores.
+* [Data Sources]{:.heading.flip-title} --- Available data source adapters.
 {:.related-posts.faded}
 
 
@@ -52,15 +46,11 @@ Here you should be able to find everything you need to know to use and interact 
 
 [Data Types]: Types.md
 [Schema Model]: SchemaModel.md
+[PolySQL]: PolySQL/README.md
+[REST]: REST/README.md
+
 [Data Stores]: Stores/README.md
 [Data Sources]: Sources/README.md
-
-[Syntax]: PolySQL/Syntax.md
-[Operators and Functions]: PolySQL/Operators.md
-[kNN Search]: PolySQL/KNN.md
-[System Management]: PolySQL/SystemManagement.md
-
-[Structure]: REST/Structure.md
 
 [Project Structure]: ProjectStructure.md
 [GitHub Labels]: Labels.md

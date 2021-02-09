@@ -5,75 +5,28 @@ title: PolySQL Syntax
 
 The page describes the SQL dialect recognized by Polypheny-DB's default SQL parser in a [BNF](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_Form)-like form.
 
-
 {% highlight sql %}
 statement:
-      alterStatement
-  |   insert
+      insert
   |   update
-  |   merge
   |   delete
   |   query
 
-alterStatement:
-       ALTER ( SYSTEM | SESSION ) SET identifier '=' expression
-     | ALTER ( SYSTEM | SESSION ) RESET identifier
-     | ALTER ( SYSTEM | SESSION ) RESET ALL
-     | ALTER SCHEMA schemaName RENAME TO newSchemaName  
-     | ALTER SCHEMA schemaName OWNER TO userName  
-     | ALTER TABLE [ schemaName . ] tableName RENAME TO newTableName  
-     | ALTER TABLE [ schemaName . ] tableName OWNER TO userName
-     | ALTER TABLE [ schemaName . ] tableName RENAME COLUMN columnName TO newColumnName
-     | ALTER TABLE [ schemaName . ] tableName DROP COLUMN columnName
-     | ALTER TABLE [ schemaName . ] tableName ADD COLUMN columnName type [ NULL | NOT NULL ] [DEFAULT defaultValue] [(BEFORE | AFTER) columnName]
-     | ALTER TABLE [ schemaName . ] tableName ADD COLUMN columnName physicalName AS name [DEFAULT defaultValue] [(BEFORE | AFTER) columnName]
-     | ALTER TABLE [ schemaName . ] tableName MODIFY COLUMN columnName SET NOT NULL
-     | ALTER TABLE [ schemaName . ] tableName MODIFY COLUMN columnName DROP NOT NULL
-     | ALTER TABLE [ schemaName . ] tableName MODIFY COLUMN columnName SET COLLATION collation
-     | ALTER TABLE [ schemaName . ] tableName MODIFY COLUMN columnName SET DEFAULT value
-     | ALTER TABLE [ schemaName . ] tableName MODIFY COLUMN columnName DROP DEFAULT
-     | ALTER TABLE [ schemaName . ] tableName MODIFY COLUMN columnName SET TYPE type
-     | ALTER TABLE [ schemaName . ] tableName MODIFY COLUMN columnName SET POSITION ( BEFORE | AFTER ) columnName
-     | ALTER TABLE [ schemaName . ] tableName ADD PRIMARY KEY ( columnName | '(' columnName [ , columnName ]* ')' )
-     | ALTER TABLE [ schemaName . ] tableName DROP PRIMARY KEY
-     | ALTER TABLE [ schemaName . ] tableName ADD CONSTRAINT constraintName UNIQUE ( columnName| '(' columnName [ , columnName ]* ')' )
-     | ALTER TABLE [ schemaName . ] tableName DROP CONSTRAINT constraintName
-     | ALTER TABLE [ schemaName . ] tableName ADD CONSTRAINT foreignKeyName FOREIGN KEY ( columnName | '(' columnName [ , columnName ]* ')' ) REFERENCES [ schemaName . ] tableName '(' columnName [ , columnName ]* ')' [ ON UPDATE ( CASCADE | RESTRICT | SET NULL | SET DEFAULT ) ] [ ON DELETE ( CASCADE | RESTRICT | SET NULL | SET DEFAULT ) ]
-     | ALTER TABLE [ schemaName . ] tableName DROP FOREIGN KEY foreignKeyName
-     | ALTER TABLE [ schemaName . ] tableName ADD [UNIQUE] INDEX indexName ON ( columnName | '(' columnName [ , columnName ]* ')' ) [ USING indexMethod ] [ ON STORE storeName ]
-     | ALTER TABLE [ schemaName . ] tableName DROP INDEX indexName
-     | ALTER TABLE [ schemaName . ] tableName ADD PLACEMENT [( columnName | '(' columnName [ , columnName ]* ')' )] ON STORE storeUniqueName
-     | ALTER TABLE [ schemaName . ] tableName MODIFY PLACEMENT ( ADD | DROP ) COLUMN columnName ON STORE storeUniqueName
-     | ALTER TABLE [ schemaName . ] tableName MODIFY PLACEMENT '(' columnName [ , columnName ]* ')' ON STORE storeUniqueName 
-     | ALTER TABLE [ schemaName . ] tableName DROP PLACEMENT ON STORE storeUniqueName
-     | ALTER CONFIG key SET value
-     | ALTER ADAPTERS ADD uniqueName USING adapterClass WITH config 
-     | ALTER ADAPTERS DROP uniqueName
-     | ALTER INTERFACES ADD uniqueName USING clazzName WITH config 
-     | ALTER INTERFACES DROP uniqueName
-     
 insert:
-      ( INSERT | UPSERT ) INTO tablePrimary
+      INSERT INTO tableName
       [ '(' column [, column ]* ')' ]
       query
 
 update:
-      UPDATE tablePrimary
+      UPDATE tableName
       SET assign [, assign ]*
       [ WHERE booleanExpression ]
 
 assign:
       identifier '=' expression
 
-merge:
-      MERGE INTO tablePrimary [ [ AS ] alias ]
-      USING tablePrimary
-      ON booleanExpression
-      [ WHEN MATCHED THEN UPDATE SET assign [, assign ]* ]
-      [ WHEN NOT MATCHED THEN INSERT VALUES '(' value [ , value ]* ')' ]
-
 delete:
-      DELETE FROM tablePrimary [ [ AS ] alias ]
+      DELETE FROM tableName [ [ AS ] alias ]
       [ WHERE booleanExpression ]
 
 query:
@@ -128,14 +81,14 @@ joinCondition:
   |   USING '(' column [, column ]* ')'
 
 tableReference:
-      tablePrimary
+      tableName
       [ matchRecognize ]
       [ [ AS ] alias [ '(' columnAlias [, columnAlias ]* ')' ] ]
 
-tablePrimary:
-      [ [ catalogName . ] schemaName . ] tableName
-      '(' TABLE [ [ catalogName . ] schemaName . ] tableName ')'
-  |   tablePrimary [ EXTEND ] '(' columnDecl [, columnDecl ]* ')'
+tableName:
+      [ schemaName . ] tableName
+      '(' TABLE [ schemaName . ] tableName ')'
+  |   tableName [ EXTEND ] '(' columnDecl [, columnDecl ]* ')'
   |   [ LATERAL ] '(' query ')'
   |   UNNEST '(' expression ')' [ WITH ORDINALITY ]
   |   [ LATERAL ] TABLE '(' [ SPECIFIC ] functionName '(' expression [, expression ]* ')' ')'
@@ -169,3 +122,28 @@ windowSpec:
       ]
       ')'
 {% endhighlight %}
+
+
+In *insert*, if the INSERT statement does not specify a list of target columns, the query must have the same number of columns as the target table.
+
+In *orderItem*, if *expression* is a positive integer *n*, it denotes the <em>n</em>th item in the SELECT clause.
+
+In *query*, *count* and *start* may each be either an unsigned integer literal or a dynamic parameter whose value is an integer.
+
+An aggregate query is a query that contains a GROUP BY or a HAVING clause, or aggregate functions in the SELECT clause. In the SELECT, HAVING and ORDER BY clauses of an aggregate query, all expressions must be constant within the current group (that is, grouping constants as defined by the GROUP BY clause, or constants), or aggregate functions, or a combination of constants and aggregate functions. Aggregate and grouping functions may only appear in an aggregate query, and only in a SELECT, HAVING or ORDER BY clause.
+
+A scalar sub-query is a sub-query used as an expression. If the sub-query returns no rows, the value is NULL; if it returns more than one row, it is an error.
+
+IN, EXISTS and scalar sub-queries can occur in any place where an expression can occur (such as the SELECT clause, WHERE clause, ON clause of a JOIN, or as an argument to an aggregate function).
+
+An IN, EXISTS or scalar sub-query may be correlated; that is, it may refer to tables in the FROM clause of an enclosing query.
+
+*selectWithoutFrom* is equivalent to VALUES.
+
+MINUS is equivalent to EXCEPT.
+
+"LIMIT start, count" is equivalent to "LIMIT count OFFSET start".
+
+
+<br>
+_Parts of this documentation are based on [Calcite SQL Reference](https://calcite.apache.org/docs/reference.html)._

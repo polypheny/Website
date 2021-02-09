@@ -72,7 +72,7 @@ ALTER INTERFACES ADD foo USING 'org.polypheny.db.restapi.HttpRestServer' WITH '{
 
 
 
-## Dropping adapters
+## Dropping query interfaces
 
 Query interfaces can be removed using the following PolySQL statement:
 
