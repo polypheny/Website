@@ -1,15 +1,15 @@
 ---
 layout: plain
-title:  k-Nearest-Neighbor Search
+title:  kNN Search
 description: >
   How to use k-nearest-neighbour search in Polypheny.
 hide_description: true
 ---
 
-k-nearest-neighbour search functionality is a way to find entries based on their distance to a specific vector.
+k-nearest-neighbour (kNN) search functionality is a way to find entries based on their distance to a specific vector.
 
 ## Function syntax
-The general function syntax for knn is: `distance(<target column>, <vector to compare with>, <metric> [, <weights>])`.
+The general function syntax for kNN is: `distance(<target column>, <vector to compare with>, <metric> [, <weights>])`.
 
 ## KNN syntax
 To express a k-Nearest-Neighbour search in SQL, you can combine the `distance` function with a `LIMIT` and `ORDER BY` clause.

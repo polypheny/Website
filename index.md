@@ -6,7 +6,7 @@ description: >
 hide_description: true
 ---
 
-Polypheny-DB is an adaptive database system bridging the gap between polystores and HTAP systems. In contrast to most existing polystore systems, Polypheny-DB offers support for DML queries. Furthermore, it features a flexible schema supporting schema changes at runtime using DDL statements.
+Polypheny-DB is an adaptive database system bridging the gap between polystores and HTAP systems. In contrast to most existing polystore systems, Polypheny-DB offers support for data manipulation queries. Furthermore, it features a flexible schema supporting schema changes at runtime.
 
 Polypheny-DB is a full database management system providing support for a rich set of data types. By providing support for features like the enforcement of constraints, transactions, prepared statements, and batch queries it even goes beyond of what many well-known DBMS provide.
 
