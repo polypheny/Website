@@ -4,9 +4,9 @@
 		display: none;
 	}
 }
-@media (min-width : 1009px) {
+@media (max-width : 1009px) {
 	img.nav-span {
-		url(https://polypheny.org/assets/logo-header.png);
+		content:url(https://polypheny.org/assets/logo-header.png);
 	}
 }
 hr.dingbat {
