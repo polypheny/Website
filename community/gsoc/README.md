@@ -62,7 +62,7 @@ See [GSoC Project Ideas](/community/gsoc/ideas/) for a list of project ideas.
 This is the mentoring team for the GSoC 2021.
 
 | Name              | Role             | Languages       |
-|-------------------|------------------|-----------------|
+|:------------------|:-----------------|:----------------|
 | Nils Hansen       | Mentor           | English, German |
 | Marc Hennemann    | Mentor           | English, German |
 | Isabel Geissmann  | Mentor           | English, German |

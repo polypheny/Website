@@ -6,7 +6,7 @@ title: The Team
 These are the people contributing to Polypheny:
 
 | Name                | GitHub                                               | 
-|---------------------|------------------------------------------------------|
+|:--------------------|:-----------------------------------------------------|
 | Khushbu Agrawal     |                                                      |
 | Christian Frei      | [@christianfrei](https://github.com/christianfrei)   |
 | Isabel Geissmann    | [@isabelge](https://github.com/isabelge)             |
