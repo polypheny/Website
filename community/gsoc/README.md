@@ -39,7 +39,7 @@ We would like to incorporate and integrate you as early as possible into the dev
 
 When you aim at fixing an issue, you are kindly asked to check the comment thread of the issue in case somebody is already working on a fix. If nobody is working on it at the moment, please leave a comment that indicates your intention to work on it. Please check the [contribution section](https://polypheny.org/community/contribute/) of our webpage for additional details.
 
-For the actual proposal, you can get inspiration from the ideas listed on the [ideas page](https://polypheny.org/community/gsoc/ideas/) or develop completely new topics of your own. We enjoy being surprised!
+For the actual proposal, you can get inspiration from the ideas listed on the [ideas page](https://polypheny.org/community/gsoc/ideas/) or develop completely new topics of your own. We like to be surprised!
 
 Your proposal should include 
 
@@ -63,9 +63,9 @@ This is the mentoring team for the GSoC 2021.
 
 | Name              | Role             | Languages       |
 |:------------------|:-----------------|:----------------|
+| Isabel Geissmann  | Mentor           | English, German |
 | Nils Hansen       | Mentor           | English, German |
 | Marc Hennemann    | Mentor           | English, German |
-| Isabel Geissmann  | Mentor           | English, German |
 | David Lengweiler  | Mentor           | English, German |
 | Jan Schönholz     | Mentor           | English, German |
 | Heiko Schuldt     | Mentor, OrgAdmin | English, German |
