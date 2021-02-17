@@ -60,13 +60,13 @@ alterStatement:
      | ALTER TABLE [ schemaName . ] tableName DROP CONSTRAINT constraintName
      | ALTER TABLE [ schemaName . ] tableName ADD CONSTRAINT foreignKeyName FOREIGN KEY ( columnName | '(' columnName [ , columnName ]* ')' ) REFERENCES [ schemaName . ] tableName '(' columnName [ , columnName ]* ')' [ ON UPDATE ( CASCADE | RESTRICT | SET NULL | SET DEFAULT ) ] [ ON DELETE ( CASCADE | RESTRICT | SET NULL | SET DEFAULT ) ]
      | ALTER TABLE [ schemaName . ] tableName DROP FOREIGN KEY foreignKeyName
-     | ALTER TABLE [ schemaName . ] tableName ADD [UNIQUE] INDEX indexName ON ( columnName | '(' columnName [ , columnName ]* ')' ) [ USING indexMethod ] [ ON STORE storeName ]
+     | ALTER TABLE [ schemaName . ] tableName ADD [UNIQUE] INDEX indexName ON ( columnName | '(' columnName [ , columnName ]* ')' ) [ USING indexMethod ] [ ON STORE storeUniqueName ]
      | ALTER TABLE [ schemaName . ] tableName DROP INDEX indexName
-     | ALTER TABLE [ schemaName . ] tableName ADD PLACEMENT [( columnName | '(' columnName [ , columnName ]* ')' )] ON STORE storeUniqueName [ WITH PARTITIONS '(' partitionId [ , partitionId ]* ')']
+     | ALTER TABLE [ schemaName . ] tableName ADD PLACEMENT [( columnName | '(' columnName [ , columnName ]* ')' )] ON STORE storeUniqueName [ WITH PARTITIONS '(' partitionName [ , partitionName ]* ')' ]
      | ALTER TABLE [ schemaName . ] tableName MODIFY PLACEMENT ( ADD | DROP ) COLUMN columnName ON STORE storeUniqueName
-     | ALTER TABLE [ schemaName . ] tableName MODIFY PLACEMENT '(' columnName [ , columnName ]* ')' ON STORE storeUniqueName 
+     | ALTER TABLE [ schemaName . ] tableName MODIFY PLACEMENT '(' columnName [ , columnName ]* ')' ON STORE storeUniqueName [ WITH PARTITIONS '(' partitionName [ , partitionName ]* ')' ]
      | ALTER TABLE [ schemaName . ] tableName DROP PLACEMENT ON STORE storeUniqueName
-     | ALTER TABLE [ schemaName . ] tableName PARTITION BY ( HASH | RANGE | LIST) '(' columnName ')' [PARTITIONS numPartitions | with (partitionName1, partitionName2 [, partitionNameN]* ) ]
+     | ALTER TABLE [ schemaName . ] tableName PARTITION BY ( HASH | RANGE | LIST) '(' columnName ')' [ PARTITIONS numPartitions | WITH '(' partitionName1, partitionName2 [, partitionNameN]* ')' ]
      | ALTER TABLE [ schemaName . ] tableName MERGE PARTITIONS
-     | ALTER TABLE [ schemaName . ] tableName MODIFY PARTITIONS '(' partitionId [ , partitionId ]* ')' ON STORE storeName
+     | ALTER TABLE [ schemaName . ] tableName MODIFY PARTITIONS '(' partitionId [ , partitionId ]* ')' ON STORE storeUniqueName
 {% endhighlight %}
