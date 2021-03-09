@@ -13,7 +13,7 @@ On this page you find news on what happens around Polypheny.
 * [Logo]{:.heading.flip-title} --- Our logo in various formats.
 * [License]{:.heading.flip-title} --- The license of this project.
 * [Acknowledgements]{:.heading.flip-title} --- A place where we thank those supporting us.
-* [GSoC]{:.heading.flip-title} --- Polypheny @ Google Summer of Code
+* [Google Summer of Code]{:.heading.flip-title} --- Polypheny @ Google Summer of Code
 {:.related-posts.faded}
 
 [The Team]: team.md
@@ -23,4 +23,4 @@ On this page you find news on what happens around Polypheny.
 [Logo]: logo.md
 [License]: license.md
 [Acknowledgements]: acknowledgements.md
-[GSoC]: gsoc/README.md
+[Google Summer of Code]: gsoc/README.md
