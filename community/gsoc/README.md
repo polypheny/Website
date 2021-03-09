@@ -55,7 +55,7 @@ See [GSoC Project Ideas](/community/gsoc/ideas/) for a list of project ideas.
 
 ## Mentors
 
-This is the mentoring team for the GSoC 2021.
+This is the mentoring team for the Google Summer of Code 2021.
 
 | Name              | Role             | Languages       |
 |:------------------|:-----------------|:----------------|
@@ -63,6 +63,7 @@ This is the mentoring team for the GSoC 2021.
 | Nils Hansen       | Mentor           | English, German |
 | Marc Hennemann    | Mentor           | English, German |
 | David Lengweiler  | Mentor           | English, German |
+| Cédric Mendelin   | Mentor           | English, German |
 | Heiko Schuldt     | Mentor, OrgAdmin | English, German |
 | Marco Vogt        | Mentor, OrgAdmin | English, German |
 {:.stretch-table}
