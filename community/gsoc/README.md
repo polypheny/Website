@@ -5,10 +5,6 @@ title: Google Summer of Code
 
 Welcome to the Polypheny [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/) 2021 projects page.
 
-Please note that our application for GSoC 2021 is currently under evaluation at Google and we have not yet been accepted as mentoring organization. 
-{:.message}
-
-
 * this unordered seed list will be replaced by toc as unordered list
 {:toc}
 

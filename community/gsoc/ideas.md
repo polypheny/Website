@@ -13,7 +13,7 @@ Simply copying and pasting one of the ideas will not work. On the other hand, cr
 
 
 ## Query the Blockchain
-A blockchain can be seen as a distributed append-only database. The aim of this project is to build an adapter for executing (read) queries against (different) blockchains like the Bitcoin blockchain or the Ethereum blockchain.
+A blockchain can be seen as a distributed append-only database. The aim of this project is to build a data source adapter for executing (read) queries against (different) blockchains like the Bitcoin blockchain or the Ethereum blockchain.
 
 Due to Polypheny's ability to join and combine data from different adapters in one query, this project will allow to integrate the latest data from a blockchain into arbitrary queries. 
 
@@ -64,15 +64,7 @@ The goal of this project is to build a freshness-aware routing component for the
 
 The required freshness is specified by the client as part of the query. The project includes the definition of an appropriate SQL syntax and the extension of the parser to support this syntax.
 
-**Difficulty**: medium
-
-
-## Container-based Store Management
-Data stores supporting an embedded mode are very handy. They can easily be deployed and removed using DDL statements or via the Polypheny-UI. Data stores not supporting an embedded mode (e.g. PostgreSQL) are more complex to setup and involve manual actions. 
-
-Introducing a container-based deployment (e.g., based on Docker) of data stores would allow to provided an embedded mode for every supported data store. 
-
-**Difficulty**: medium-easy
+**Difficulty**: hard
 
 
 ## Physical Query Plan Builder
