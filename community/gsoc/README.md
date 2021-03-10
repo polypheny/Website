@@ -33,7 +33,7 @@ Note that we have a [code of conduct](/community/code_of_conduct/). Please follo
 
 We would like to incorporate and integrate you as early as possible into the development community of Polypheny. Therefore, we have decided not to add dedicated tests or puzzles which are unrelated to the actual code base. Rather, we have defined a list of [good first issues](https://github.com/polypheny/Polypheny-DB/issues?q=is%3Aissue+is%3Aopen+label%3AE-good-first-issue) that contain bugs that have a relatively limited scope and are thus very easy to fix. We consider this a great opportunity to get started and to familiarize with the code base.
 
-When you aim at fixing an issue, you are kindly asked to check the comment thread of the issue in case somebody is already working on a fix. If nobody is working on it at the moment, please leave a comment that indicates your intention to work on it. Please check the [contribution section](https://polypheny.org/community/contribute/) of our webpage for additional details.
+When you aim at fixing an issue, you are kindly asked to check the comment thread of the issue in case somebody is already working on a fix. If nobody is working on it at the moment, please leave a comment that indicates your intention to work on it. Please check the [contribution section](https://polypheny.org/community/contribute/) of our webpage for additional details. We are also glad if you leave a star on the Polypheny-DB repository.
 
 For the actual proposal, you can get inspiration from the ideas listed on the [ideas page](https://polypheny.org/community/gsoc/ideas/) or develop completely new topics of your own. We like to be surprised!
 
