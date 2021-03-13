@@ -49,7 +49,7 @@ The _Contextual Query Language (CQL)_ is a formal language for representing quer
 ## Server-side Query to File
 For some applications, especially for those making use of the multimedia and file storage capabilities of Polypheny-DB, it is useful to represent and interact with a table (or the result of an arbitrary query) as file system. With _Query to File_ we already have a prototype implementation of this using FUSE and running on the client computer. 
 
-The idea of this project is to integrate this concept in Polypheny-DB. Instead of an application running on the local machine, Polypheny-DB should provide an FTP or WebDAV share that could then be mounted on other machines.
+The idea of this project is to integrate this concept directly into Polypheny-DB. Instead of an application running on the local machine, Polypheny-DB should provide a FTP or WebDAV share that could then be mounted on other machines.
 
 **Difficulty**: medium
 
@@ -61,9 +61,9 @@ Auto-increment a primary key or inserting the result of a function (e.g. the cur
 
  
 ## Data Source Adapter for Excel Sheets
-Data source adapters allow to map existing data into the schema of Polypheny-DB. This allows to query this data using the available query languages and features of Polypheny-DB. Furthermore, this imported tables can be joined with other tables. Polypheny-DB currently contains support mapping data from different JDBC databases and CSV files. The goal of this project is to add adapter similar to the CSV adapter but for Excel files. 
+Data source adapters allow to map existing data into the schema of Polypheny-DB. This allows to query the mapped data using the available query languages and features of Polypheny-DB. Furthermore, imported tables can be joined with other tables. Polypheny-DB currently contains support mapping data from different JDBC databases and CSV files. 
 
-You can also come up with your own idea for a data source adapter. Data source adapters can be read-only.
+The goal of this project is to add adapter similar to the CSV adapter but for Excel files. You can also come up with your own idea for a data source adapter. Data source adapters do not necessarily need to support data modification queries.
 
 **Difficulty**: easy-medium
 
@@ -76,9 +76,5 @@ A physical query plan builder would be extremely helpful for development. Becaus
 To get an impression how a physical query plan in Polypheny looks like you can simply execute a query in the UI and have a look at the plan by selecting "Physical Query Plan" in the left menu.
 
 **Difficulty**: medium
-
-
-
-
 
 
