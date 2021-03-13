@@ -27,9 +27,6 @@ labels to issues and (to a lesser degree) pull requests:
 
 * The light orange **invalid** label marks an issue as being opened in error.
 
-* The purple **metabug** label marks lists of bugs collected by other
-  categories.
-
 * Orange, **P**-prefixed labels indicate a bug's or issue's **priority**.
 
 * Gray, **S**-prefixed labels are used for tracking the **status** of pull
@@ -51,10 +48,9 @@ Other possible labels:
 
 * **S-inactive**, there has been no activity for some time.
 
-* **P-critical**: This pull request must be reviewed and merged as soon as possible.
 
 ## Credits
 
-This labeling scheme is based directly on the [Rust language repository](https://github.com/rust-lang/rust/). 
+This labeling scheme is based on the [Rust language repository](https://github.com/rust-lang/rust/). 
 The rust project is dual-licensed under Apache 2.0 and MIT terms.
 

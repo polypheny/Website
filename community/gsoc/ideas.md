@@ -46,25 +46,26 @@ The _Contextual Query Language (CQL)_ is a formal language for representing quer
 **Difficulty**: medium
 
 
-## Keep Them All     
-A multi-version database system allows to store multiple versions of the same entry. This allows, for example, in a human resources database to not only query the current salary of an employee, but also the salary they had two years ago.  
+## Server-side Query to File
+For some applications, especially for those making use of the multimedia and file storage capabilities of Polypheny-DB, it is useful to represent and interact with a table (or the result of an arbitrary query) as file system. With _Query to File_ we already have a prototype implementation of this using FUSE and running on the client computer. 
 
-The goal of this project is to extend Polypheny-DB to transparently support storing multiple versions of an element including a full referential integrity for the past revisions. 
+The idea of this project is to integrate this concept in Polypheny-DB. Instead of an application running on the local machine, Polypheny-DB should provide an FTP or WebDAV share that could then be mounted on other machines.
 
-The project includes
-* extending Polypheny's SQL dialect to support specifying a version,
-* rewriting the queries to retrieve the right version and to add a new version if the query aims to modify an existing entry, and
-* evaluate the correctness of the system especially for complex queries.
-
-**Difficulty**: hard
+**Difficulty**: medium
 
 
-## A Question of Freshness
-The goal of this project is to build a freshness-aware routing component for the Polypheny which is capable of handling stores with different levels of data freshness. Depending on the freshness required by queries in the workload, the system should autonomously decide if it makes sense to postpone updating some of the data stores until there is less load on the system to refresh them.
+## Support for Default Functions and Auto-Increment
+Auto-increment a primary key or inserting the result of a function (e.g. the current timestamp) is a common feature in database systems. The idea of this project is to add support for this handy feature in Polypheny-DB.
 
-The required freshness is specified by the client as part of the query. The project includes the definition of an appropriate SQL syntax and the extension of the parser to support this syntax.
+**Difficulty**: medium
 
-**Difficulty**: hard
+ 
+## Data Source Adapter for Excel Sheets
+Data source adapters allow to map existing data into the schema of Polypheny-DB. This allows to query this data using the available query languages and features of Polypheny-DB. Furthermore, this imported tables can be joined with other tables. Polypheny-DB currently contains support mapping data from different JDBC databases and CSV files. The goal of this project is to add adapter similar to the CSV adapter but for Excel files. 
+
+You can also come up with your own idea for a data source adapter. Data source adapters can be read-only.
+
+**Difficulty**: easy-medium
 
 
 ## Physical Query Plan Builder
@@ -77,12 +78,7 @@ To get an impression how a physical query plan in Polypheny looks like you can s
 **Difficulty**: medium
 
 
-## Polypheny Goes Semantics 
-Triple stores such as RDF manage data together with semantic relationships. The aim of this project is to build an adapter for integrating RDF stores into Polypheny and to support semantic queries, i.e., queries that leverage these semantic relationships.
 
-An optional extension of this project is the integration of SPARQL into Polypheny, for instance by mapping SPARQL to SQL.
-
-**Difficulty**: medium-hard
 
 
 
