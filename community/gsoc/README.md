@@ -3,7 +3,7 @@ layout: plain
 title: Google Summer of Code
 ---
 
-Welcome to the Polypheny [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/) 2021 projects page.
+Welcome to the Polypheny [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/) 2021 project page.
 
 * this unordered seed list will be replaced by toc as unordered list
 {:toc}

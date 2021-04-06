@@ -3,7 +3,7 @@ layout: plain
 title: License
 ---
 
-Polypheny-DB and a major part of the sub-projects is licensed under the Apache 2 licenses. Some of the drivers and clients are currently licensed under the MIT license. Please check the corresponding GitHub repository.
+Polypheny-DB and most of the sub-projects of the Polypheny stack are licensed under the Apache 2 license. Some of the drivers and clients are currently licensed under the MIT license. Please check the corresponding GitHub repository.
 
 
 ## Apache License
