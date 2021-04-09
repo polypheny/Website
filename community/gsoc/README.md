@@ -44,6 +44,8 @@ Your proposal should include
 - details on how to implement your idea and
 - the GitHub id of your pull request.
 
+Please use the [this](https://docs.google.com/document/d/1Hf8GhAiBqfDsIlTqOD-8-f9cQ9F1JpOrJkzta4SLOwk) template for writing you proposal. 
+
 
 
 
