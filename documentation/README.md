@@ -21,6 +21,7 @@ Here you should be able to find everything you need to know to use and interact 
 * [PolySQL]{:.heading.flip-title} --- The Polypheny SQL dialect
 * [REST]{:.heading.flip-title} --- How to use the REST-based query interface.
 {:.related-posts.faded}
+* [Docker]{:.heading.flip-title} --- How to work with Docker inside Polypheny.
 
 
 ## Administration
@@ -45,6 +46,7 @@ Here you should be able to find everything you need to know to use and interact 
 [Schema Model]: SchemaModel.md
 [PolySQL]: PolySQL/README.md
 [REST]: REST/README.md
+[Docker]: Docker/README.md
 
 [Data Stores]: Stores/README.md
 [Data Sources]: Sources/README.md
