@@ -1,11 +1,15 @@
-# Docker 
-Polypheny allows to deploy a multitude of different underlying databases (like Cassandra, MonetDB, etc.). 
+---
+layout: plain
+title: Docker-based data store deployment
+---
+
+Polypheny-DB allows to deploy a multitude of different underlying databases (like Cassandra, MonetDB, etc.). 
 Those so-called adapters can be either sources, which only allow to query their data by Polypheny or stores, which also allow to manipulate it.
 
-While some of these adapters can be deployed directly (embedded) in Polypheny itself, others need to be started and configured outside Polypheny and then connected to it (remote).
+While some of these adapters can be deployed directly (embedded) in Polypheny-DB itself, others need to be started and configured outside Polypheny-DB and then connected to it (remote).
 
 This process can be somewhat challenging. 
-To ease the access to such adapters, Polypheny offers the ability to manage some adapters via Docker automatically.
+To ease the access to such adapters, Polypheny-DB offers the ability to manage some adapters via Docker automatically.
 
 Docker is combination of tools, and allows to manage different preconfigured software packets, so-called containers, to be deployed automatically. 
 Those containers are isolated from the deployant system and can communicate in predefined channels with one another and the managing system.
@@ -23,8 +27,8 @@ These can be found here:
 
 [Docker Desktop (Linux)](https://hub.docker.com/search?offering=community&operating_system=linux&q=&type=edition)
 
-## Connect Docker to Polypheny
-After Docker is started and running on the system, it has to be configured to allow Polypheny to control it.
+## Connect Docker with Polypheny-DB
+After Docker is started and running on the system, it has to be configured to allow Polypheny-DB to control it.
 To achieve this, multiple different methods can be employed, according to the used system.
 For clarity, the two easiest methods are described here.
 
@@ -32,11 +36,13 @@ For clarity, the two easiest methods are described here.
 Docker exposes a predefined port to the running system. Which in most cases is port 2476, but this port only allows secure connections.
 To quickly generate the needed self-signed certificates to achieve that, a container like [docker-remote-api-tls](https://github.com/kekru/docker-remote-api-tls) can be utilized.
 
-*Before deploying the tls container make sure to create the path ~/.polypheny/certs if it not exists already.*
+Before deploying the tls container make sure to create the path ~/.polypheny/certs in case it does not already exists.
+{:.note title="Attention"}
 
-Polypheny already comes with an example configuration of this container, which lies in a file called `docker-compose.yml`. 
+Polypheny-DB already comes with an example configuration of this container, which lies in a file called `docker-compose.yml`. 
 
-```
+~~~yaml
+// file: docker-compose.yml
 version: "3.4"
 services:
     remote-api:
@@ -51,19 +57,23 @@ services:
         volumes:
             - ~/.polypheny/certs/localhost:/data/certs
             - /var/run/docker.sock:/var/run/docker.sock:ro
-```
-*For security reason it is highly recommended changing [supersecret] to something different before deploying.*
-*When Docker is run with`sudo`, `~/.polypheny/certs/localhost` should be replaced with `/home/[user]/.polypheny/certs/localhost`.*
+~~~
 
+*For security reason it is highly recommended changing [supersecret] to something different before deploying.*
+
+When Docker is run with`sudo`, `~/.polypheny/certs/localhost` should be replaced with `/home/[user]/.polypheny/certs/localhost`.
+{:.note title="Attention"}
 
 Most Docker installations also install [docker-compose](https://docs.docker.com/compose/), which automates a lot of steps when configuring Docker. 
 When docker-compose is installed, one can just start the special container by navigating in the folder of the docker-compose.yml file and execute it by running:
 
-```docker-compose up -d```
+~~~
+docker-compose up -d
+~~~
 
 If docker-docker compose is not installed but only Docker itself, one can achieve the same by executing following command.
 
-```
+~~~bash
 docker run -d \
     --restart unless-stopped \
     --name polypheny-connector \
@@ -73,10 +83,12 @@ docker run -d \
     -v ~/.polypheny/certs/localhost:/data/certs \
     -v /var/run/docker.sock:/var/run/docker.sock:ro \
     kekru/docker-remote-api-tls:v0.3.0
-```
+~~~
 
 *For security reason it is highly recommended changing [supersecret] to something different before deploying.*
-*When Docker is run with`sudo`, `~/.polypheny/certs/localhost` should be replaced with `/home/[user]/.polypheny/certs/localhost`.*
+
+When Docker is run with`sudo`, `~/.polypheny/certs/localhost` should be replaced with `/home/[user]/.polypheny/certs/localhost`.
+{:.note title="Attention"}
 
 
 ### Insecure Connection Windows (only development)
@@ -97,7 +109,7 @@ When the connection was set up correctly, it will highlight green and display **
 Do not forget to save, after making changes.
 
 
-## (Optional) Remote Docker Instance
+## (Optional) Docker on Remote Hosts
 To allow for a more flexible deployment setup, Polypheny also allows connecting to external Docker instances. 
 While the steps to achieve this are mostly identical to the local setup, there are some key differences.
 
@@ -106,13 +118,14 @@ It is recommended to use the TLS container for this setup.
 First, the CERT_HOSTNAME needs to be exchanged with the ip of the remote host.
 Then it can be started, and the automatically generated certificates need to be copied to the client and placed in `~/.polypheny/certs/[ip-of-remote]` or `/home/[user]/.polypheny/certs/localhost` when using `sudo`.
 
-*One has to make sure, to allow the port 2376 of the remote to be accessible from the correct external source.*
+One has to make sure, to allow the port 2376 of the remote to be accessible from the correct external source.
+{:.note title="Attention"}
 
 When everything is set up correctly the remote can be added in Polypheny by navigating to the **Config** -> **Docker**. 
 There a new instance can be created, and the ip of the remote needs to be entered.
 
 
-## Frequently Asked Questions
+## Troubleshooting
 * **The certificates are not in the `~/.polypheny/certs/`, when using the TLS Container:**
   
   If there already exist a folder **localhost** or **[ip-of-remote]**, try deleting it and re-run the `docker-compose up -d` or the docker run file. 
