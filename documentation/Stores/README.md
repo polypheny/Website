@@ -12,3 +12,9 @@ Polypheny currently supports the following data stores:
 * MonetDB
 * MongoDB (WIP)
 * PostgreSQL
+
+Data stores can be added using one of the following approaches. Not all approaches are supported by all adapters.
+
+* Embedded
+* Remote
+* [Docker](Docker.md)

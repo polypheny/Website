@@ -3,46 +3,35 @@ layout: plain
 title: Docker-based data store deployment
 ---
 
-Polypheny-DB allows to deploy a multitude of different underlying databases (like Cassandra, MonetDB, etc.). 
-Those so-called adapters can be either sources, which only allow to query their data by Polypheny or stores, which also allow to manipulate it.
+Polypheny-DB supports a multitude of different underlying data stores (like Cassandra, MonetDB, etc.). Polypheny-Db connects to these databases using data store adapters. While some of these adapters can be deployed directly (embedded) in Polypheny-DB itself, others need to be deployed and configured outside Polypheny-DB and then connected to it (remote).
 
-While some of these adapters can be deployed directly (embedded) in Polypheny-DB itself, others need to be started and configured outside Polypheny-DB and then connected to it (remote).
+This process can be somewhat challenging. Polypheny-DB, therefore, offers the ability to deploy and mang some adapters directly from Polypheny-DB using Docker. This massively simplifies the setup of a data store. 
 
-This process can be somewhat challenging. 
-To ease the access to such adapters, Polypheny-DB offers the ability to manage some adapters via Docker automatically.
+Docker allows the automated setup and execution of preconfigured software packets, so-called containers. These containers are isolated from the host system.
 
-Docker is combination of tools, and allows to manage different preconfigured software packets, so-called containers, to be deployed automatically. 
-Those containers are isolated from the deployant system and can communicate in predefined channels with one another and the managing system.
-
-More information to Docker can be found here: [Link to Docker](https://www.docker.com/)
+More information about Docker can be found [here](https://www.docker.com/).
 
 ## Install Docker
-To actively use Docker, first one needs to install the appropriate Docker for the running system.
-
-These can be found here:
+Docker is available for all major operating systems. 
 
 [Docker Desktop (Windows) ](https://www.docker.com/products/docker-desktop)
 
-[Docker Desktop (Mac) ](https://hub.docker.com/editions/community/docker-ce-desktop-mac?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=header)
+[Docker Desktop (Mac)](https://hub.docker.com/editions/community/docker-ce-desktop-mac?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=header)
 
-[Docker Desktop (Linux)](https://hub.docker.com/search?offering=community&operating_system=linux&q=&type=edition)
+[Docker Engine (Linux)](https://hub.docker.com/search?offering=community&operating_system=linux&q=&type=edition)
+
 
 ## Connect Docker with Polypheny-DB
-After Docker is started and running on the system, it has to be configured to allow Polypheny-DB to control it.
-To achieve this, multiple different methods can be employed, according to the used system.
-For clarity, the two easiest methods are described here.
+The easiest approach to setup Docker with Polypheny-DB is by using the [docker-remote-api-tls](https://github.com/kekru/docker-remote-api-tls) container. This Container exposes the Docker Remote API. The API is secure and requires clients to authenticate using a TLS client certificat. The required certificate is created by the container on start up. 
 
-### TLS Container
-Docker exposes a predefined port to the running system. Which in most cases is port 2476, but this port only allows secure connections.
-To quickly generate the needed self-signed certificates to achieve that, a container like [docker-remote-api-tls](https://github.com/kekru/docker-remote-api-tls) can be utilized.
-
-Before deploying the tls container make sure to create the path ~/.polypheny/certs in case it does not already exists.
+Before deploying the connector container, make sure that the `~/.polypheny/certs` folder exists.
 {:.note title="Attention"}
 
-Polypheny-DB already comes with an example configuration of this container, which lies in a file called `docker-compose.yml`. 
+### Using Docker Compose
+Polypheny-DB comes with a Docker compose file containing an example configuration of this container. The `docker-compose.yml` file can be found in the root directory of Polypheny-DB. 
 
 ~~~yaml
-// file: docker-compose.yml
+// file: "docker-compose.yml"
 version: "3.4"
 services:
     remote-api:
@@ -59,9 +48,9 @@ services:
             - /var/run/docker.sock:/var/run/docker.sock:ro
 ~~~
 
-*For security reason it is highly recommended changing [supersecret] to something different before deploying.*
+*For security reason it is highly recommended changing [supersecret] to something more secure.*
 
-When Docker is run with`sudo`, `~/.polypheny/certs/localhost` should be replaced with `/home/[user]/.polypheny/certs/localhost`.
+When running docker-compose using `sudo`, make sure to replace `~/.polypheny/certs/localhost` with the absolut path: `/home/[user]/.polypheny/certs/localhost`
 {:.note title="Attention"}
 
 Most Docker installations also install [docker-compose](https://docs.docker.com/compose/), which automates a lot of steps when configuring Docker. 
@@ -71,7 +60,9 @@ When docker-compose is installed, one can just start the special container by na
 docker-compose up -d
 ~~~
 
-If docker-docker compose is not installed but only Docker itself, one can achieve the same by executing following command.
+
+### Using Docker Run
+Instead of using docker-compose, it is also possible to start the container using the following Docker run command:
 
 ~~~bash
 docker run -d \
@@ -87,49 +78,30 @@ docker run -d \
 
 *For security reason it is highly recommended changing [supersecret] to something different before deploying.*
 
-When Docker is run with`sudo`, `~/.polypheny/certs/localhost` should be replaced with `/home/[user]/.polypheny/certs/localhost`.
+When running Docker using `sudo`, `~/.polypheny/certs/localhost` should be replaced with `/home/[user]/.polypheny/certs/localhost`.
 {:.note title="Attention"}
 
 
-### Insecure Connection Windows (only development)
-
-When using Windows, one can also use a different method to allow Polyheny to connect to Docker. 
-This method should only be used for local debugging and disabled after.
-
-Docker allows to use insecure local connections by enabling them in the settings.
-For this one has to open the Docker Desktop settings and check the box **Expose daemon on tcp://localhost:2375 without TLS**.
-
-
-## Validate Connection and Deploy Adapter in Polypheny
-
-After configuring Docker correctly, one can start Polypheny and navigate to **Config -> Docker**.
-When the Insecure Connection method was used one has to change the Docker instance settings accordingly.
-For one, the **use insecure** checkbox has to be checked and second the port has to be changed to **2375**.
-When the connection was set up correctly, it will highlight green and display **Reachable**.
-Do not forget to save, after making changes.
+## Validate Connection and Deploy Data Stores
+After configuring Docker correctly, one can start Polypheny-DB and navigate to **Config -> Docker**. When the connection has been set up correctly, it will be highlighted green and display **Reachable**. Do not forget to save, after making changes.
 
 
 ## (Optional) Docker on Remote Hosts
-To allow for a more flexible deployment setup, Polypheny also allows connecting to external Docker instances. 
-While the steps to achieve this are mostly identical to the local setup, there are some key differences.
+To allow for a more flexible deployment setup, Polypheny-DB also allows Docker installations running on other machines. The necessary steps tp connect to a remote docker instance are mostly identical to the local setup.
 
-### Enable Docker on Remote Host
-It is recommended to use the TLS container for this setup.
-First, the CERT_HOSTNAME needs to be exchanged with the ip of the remote host.
-Then it can be started, and the automatically generated certificates need to be copied to the client and placed in `~/.polypheny/certs/[ip-of-remote]` or `/home/[user]/.polypheny/certs/localhost` when using `sudo`.
+Before starting the connector container (using compose or the run command) on the remote system, make sure to change the CERT_HOSTNAME to the IP address or hostname of the remote system. After starting the connector container, copy the generated certificates to `~/.polypheny/certs/[ip-of-remote]` on the system Polypheny-DB is running on.
 
-One has to make sure, to allow the port 2376 of the remote to be accessible from the correct external source.
+Make sure that port 2376 on the remote system is accessible from the machine Polypheny-DB is running on.
 {:.note title="Attention"}
 
-When everything is set up correctly the remote can be added in Polypheny by navigating to the **Config** -> **Docker**. 
-There a new instance can be created, and the ip of the remote needs to be entered.
+When everything has been set up correctly, the remote can be added in the UI by navigating to **Config** -> **Docker**. To connect to the remote host, add a new instance using the IP address of the machine the remote docker instance is running on.
 
 
 ## Troubleshooting
-* **The certificates are not in the `~/.polypheny/certs/`, when using the TLS Container:**
+* **Starting the connector container fails. No certificates in the `~/.polypheny/certs/` folder.**
   
-  If there already exist a folder **localhost** or **[ip-of-remote]**, try deleting it and re-run the `docker-compose up -d` or the docker run file. 
-  When using a Unix operating system, one can also try to give the approperate rights to the certs folder, by using:
+  If there is already a **localhost** or **[ip-of-remote]** folder, try deleting it and run `docker-compose up -d` or execute the Docker run command again. 
+  When using a Unix operating system, one can also try to set the access rights to the certs folder:
   ```
   sudo chmod -R 770 .polypheny/certs/
   sudo chown -R ubuntu:docker .polypheny/certs/
