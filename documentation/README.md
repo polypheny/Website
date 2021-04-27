@@ -25,7 +25,6 @@ Here you should be able to find everything you need to know to use and interact 
 
 ## Administration
 * [Data Stores]{:.heading.flip-title} --- Supported data stores.
-* [Deploy Using Docker]{:.heading.flip-title} --- How to work with Docker inside Polypheny.
 * [Data Sources]{:.heading.flip-title} --- Available data source adapters.
 {:.related-posts.faded}
 
@@ -48,7 +47,6 @@ Here you should be able to find everything you need to know to use and interact 
 [REST]: REST/README.md
 
 [Data Stores]: Stores/README.md
-[Deploy Using Docker]: Docker/README.md
 [Data Sources]: Sources/README.md
 
 [Project Structure]: ProjectStructure.md
