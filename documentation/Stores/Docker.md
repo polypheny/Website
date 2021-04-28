@@ -30,8 +30,8 @@ Before deploying the connector container, make sure that the `~/.polypheny/certs
 ### Using Docker Compose
 Polypheny-DB comes with a Docker compose file containing an example configuration of this container. The `docker-compose.yml` file can be found in the root directory of Polypheny-DB. 
 
-~~~yaml
-// file: "docker-compose.yml"
+~~~yml
+# file: `docker-compose.yml`
 version: "3.4"
 services:
     remote-api:
