@@ -10,7 +10,7 @@ Polypheny currently supports the following data stores:
 * File
 * HSQLDB
 * MonetDB
-* MongoDB (WIP)
+* [MongoDB](Mongo.md)
 * PostgreSQL
 
 Data stores can be added using one of the following approaches. Not all approaches are supported by all adapters.

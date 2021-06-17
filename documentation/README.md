@@ -32,6 +32,7 @@ Here you should be able to find everything you need to know to use and interact 
 ## For developers
 * [Project Structure]{:.heading.flip-title} --- Basic overview on the different parts of Polypheny.
 * [GitHub Labels]{:.heading.flip-title} --- Best practices for handling issues and pull requests.
+* [Testing]{:.heading.flip-title} --- Including and excluding tests into the used Testsuite.
 * [Logging]{:.heading.flip-title} --- Dealing with the logger.
 * [Documentation Guidelines]{:.heading.flip-title} --- What and how to document.
 * [Dependency Management]{:.heading.flip-title} --- How we deal with dependencies.
@@ -51,6 +52,7 @@ Here you should be able to find everything you need to know to use and interact 
 
 [Project Structure]: ProjectStructure.md
 [GitHub Labels]: Labels.md
+[Testing]: Testing.md
 [Logging]: Logging.md
 [Documentation Guidelines]: Documentation.md
 [Dependency Management]: Dependencies.md
