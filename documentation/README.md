@@ -14,6 +14,8 @@ Here you should be able to find everything you need to know to use and interact 
 * [Setup]{:.heading.flip-title} --- How to setup and run Polypheny.
 {:.related-posts.faded}
 
+## System Architecture
+* [Data Partitioning]{:.heading.flip-title} -- Overview on polypheny's partition essentials
 
 ## Using Polypheny-DB
 * [Data Types]{:.heading.flip-title} --- Overview on the type system.
@@ -40,6 +42,8 @@ Here you should be able to find everything you need to know to use and interact 
 
 
 [Setup]: Setup.md
+
+[Data Partitioning]: DataPartitioning.md
 
 [Data Types]: Types.md
 [Schema Model]: SchemaModel.md
