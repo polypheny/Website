@@ -24,7 +24,7 @@ Docker is available for all major operating systems.
 ## Connect Docker with Polypheny-DB
 The easiest approach to setup Docker with Polypheny-DB is by using the [docker-remote-api-tls](https://github.com/kekru/docker-remote-api-tls) container. This Container exposes the Docker Remote API. The API is secure and requires clients to authenticate using a TLS client certificat. The required certificate is created by the container on start up. 
 
-Before deploying the connector container, make sure that the `~/.polypheny/certs` folder exists.
+Before deploying the connector container, make sure that the `~/.polypheny/certs` folder exists or the `POLYPHENY_HOME` system variable is set to an existing folder.
 {:.note title="Attention"}
 
 ### Using Docker Compose
@@ -44,13 +44,13 @@ services:
             - CREATE_CERTS_WITH_PW=supersecret
             - CERT_HOSTNAME=localhost
         volumes:
-            - ~/.polypheny/certs/localhost:/data/certs
+            - ${POLYPHENY_HOME:-~}/.polypheny/certs/localhost:/data/certs
             - /var/run/docker.sock:/var/run/docker.sock:ro
 ~~~
 
 *For security reason it is highly recommended changing [supersecret] to something more secure.*
 
-When running docker-compose using `sudo`, make sure to replace `~/.polypheny/certs/localhost` with the absolut path: `/home/[user]/.polypheny/certs/localhost`
+When running docker-compose using `sudo`, make sure to replace `~/.polypheny/certs/localhost` with the absolut path: `/home/[user]/.polypheny/certs/localhost` (only when not using the `POLYPHENY_HOME` system variable)
 {:.note title="Attention"}
 
 Most Docker installations also install [docker-compose](https://docs.docker.com/compose/), which automates a lot of steps when configuring Docker. 
@@ -71,14 +71,14 @@ docker run -d \
     -p 2376:443 \
     -e CREATE_CERTS_WITH_PW=supersecret \
     -e CERT_HOSTNAME=localhost \
-    -v ~/.polypheny/certs/localhost:/data/certs \
+    -v ${POLYPHENY_HOME:-~}/.polypheny/certs/localhost:/data/certs \
     -v /var/run/docker.sock:/var/run/docker.sock:ro \
     kekru/docker-remote-api-tls:v0.3.0
 ~~~
 
 *For security reason it is highly recommended changing [supersecret] to something different before deploying.*
 
-When running Docker using `sudo`, `~/.polypheny/certs/localhost` should be replaced with `/home/[user]/.polypheny/certs/localhost`.
+When running Docker using `sudo` without using a dedicated `POLYPHENY_HOME` system variable, `${POLYPHENY_HOME:-~}/.polypheny/certs/localhost` should be replaced with `/home/[user]/.polypheny/certs/localhost`.
 {:.note title="Attention"}
 
 

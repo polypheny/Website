@@ -27,6 +27,10 @@ java -jar polypheny-control.jar control -p 8070
 
 We strongly recommend not to use port `8080`, `8081` and `8082` because these are the default ports of services offered by Polypheny-DB.
 
+### Default Folder
+Polypheny has to store some file one the local filesystem. Per default, this is done in a dedicated folder called `.polypheny` in the home directory of the executing user.
+This location can be adjusted by setting a system variable called `POLYPHENY_HOME`, which points to the desired location, before Polypheny is started.
+
 
 ### (Optional) Setup Docker
 See [this](Stores/Docker.md) on how to setup Docker to use the built-in Docker-based data store deployment.
