@@ -10,8 +10,10 @@ statement:
       alterStatement
   |   createSchemaStatement
   |   createTableStatement
+  |   createViewStatement
   |   dropSchemaStatement
   |   dropTableStatement
+  |   dropViewStatement
   |   truncateTableStatement
 
 createSchemaStatement:
@@ -23,17 +25,24 @@ createTableStatement:
       [ ON STORE store ]
       [ PARTITION BY ( HASH | RANGE | LIST ) '(' columnName ')' [PARTITIONS numberPartitions | with (partitionName1, partitionName2 [, partitionNameN]* )] ]
 
+createViewStatement:
+      CREATE VIEW [ OR REPLACE ] name
+      [ '(' tableElement [, tableElement ]* ')' ]
+      [ AS query ]
+
 tableElement:
       columnName type [ NOT ] NULL [ DEFAULT value ]
   |   PRIMARY KEY '(' columnName [, columnName ]* ')'
   |   UNIQUE '(' columnName [, columnName ]* ')'
-     
 
 dropSchemaStatement:
       DROP SCHEMA [ IF EXISTS ] name
 
 dropTableStatement:
       DROP TABLE [ IF EXISTS ] name
+
+dropViewStatement:
+      DROP VIEW [ IF EXISTS ] name
       
 truncateTableStatement:
       TRUNCATE TABLE name
@@ -69,4 +78,6 @@ alterStatement:
      | ALTER TABLE [ schemaName . ] tableName PARTITION BY ( HASH | RANGE | LIST) '(' columnName ')' [ PARTITIONS numPartitions | WITH '(' partitionName1, partitionName2 [, partitionNameN]* ')' ]
      | ALTER TABLE [ schemaName . ] tableName MERGE PARTITIONS
      | ALTER TABLE [ schemaName . ] tableName MODIFY PARTITIONS '(' partitionId [ , partitionId ]* ')' ON STORE storeUniqueName
+     | ALTER VIEW [ schemaName . ] tableName RENAME TO newTableName
+     | ALTER VIEW [ schemaName . ] tableName RENAME COLUMN columnName TO newColumnName
 {% endhighlight %}
